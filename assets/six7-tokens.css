@@ -1,0 +1,10 @@
+:root {
+  --six7-color-ink: 17 17 17;
+  --six7-color-paper: 255 255 255;
+  --six7-color-silver: 243 243 243;
+  --six7-color-red: 230 57 70;
+  --six7-font-display: var(--font-heading-family, 'Montserrat', sans-serif);
+  --six7-font-body: var(--font-body-family, 'Inter', sans-serif);
+  --six7-header-rule: rgb(var(--six7-color-ink) / 12%);
+  --six7-header-link-track: 0.08em;
+}

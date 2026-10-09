@@ -1,0 +1,36 @@
+.section-header .header-wrapper--border-bottom {
+  border-bottom-color: var(--six7-header-rule);
+}
+
+.section-header .header__heading-link .h2 {
+  color: rgb(var(--color-foreground));
+  font-family: var(--six7-font-display);
+  font-size: 1.8rem;
+  font-weight: var(--font-heading-weight);
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+}
+
+.section-header .header__inline-menu .header__menu-item {
+  font-family: var(--six7-font-body);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: var(--six7-header-link-track);
+  text-transform: uppercase;
+}
+
+.section-header .header__inline-menu .header__menu-item:hover span,
+.section-header .header__inline-menu .header__active-menu-item {
+  text-decoration-color: rgb(var(--six7-color-red));
+  text-underline-offset: 0.5rem;
+}
+
+.section-header .header__icon:hover {
+  color: rgb(var(--six7-color-red));
+}
+
+@media screen and (max-width: 749px) {
+  .section-header .header__heading-link .h2 {
+    font-size: 1.7rem;
+  }
+}
