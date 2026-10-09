@@ -1,0 +1,446 @@
+{{ 'six7-hero.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign hero_image = section.settings.desktop_image | default: section.settings.mobile_image
+  assign mobile_image = section.settings.mobile_image | default: hero_image
+  assign image_alt = section.settings.image_alt | default: hero_image.alt | default: mobile_image.alt
+  assign first_line_length = section.settings.poster_line_1.size | at_least: 5
+  assign second_line_length = section.settings.poster_line_2.size | at_least: 5
+  assign first_line_size = 128.0 | divided_by: first_line_length
+  assign second_line_size = 128.0 | divided_by: second_line_length
+  assign heading_tag = 'h2'
+  assign image_loading = 'lazy'
+  assign fetch_priority = 'auto'
+  if section.index == 1
+    assign heading_tag = 'h1'
+    assign image_loading = 'eager'
+    assign fetch_priority = 'high'
+  endif
+-%}
+
+<div
+  class="six7-hero{% if hero_image == blank %} six7-hero--typographic{% endif %}{% if section.settings.enable_motion %} six7-hero--motion{% endif %}"
+  style="
+    --six7-first-size: {{ first_line_size }};
+    --six7-second-size: {{ second_line_size }};
+    --six7-type-scale: {{ section.settings.poster_type_scale | default: 100 | divided_by: 100.0 }};
+    --six7-background: {{ section.settings.background_color }};
+    --six7-text: {{ section.settings.text_color }};
+    --six7-accent: {{ section.settings.accent_color }};
+    --six7-button-text: {{ section.settings.button_text_color }};
+    --six7-media-background: {{ section.settings.media_background_color }};
+    --six7-image-angle: {{ section.settings.image_angle }}deg;
+    --six7-image-scale: {{ section.settings.image_scale | divided_by: 100.0 }};
+  "
+>
+  <div class="six7-hero__inner">
+    <div class="six7-hero__rail">
+      {%- if section.settings.signature != blank -%}
+        <span class="six7-hero__signature">{{ section.settings.signature | escape }}</span>
+      {%- endif -%}
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="six7-hero__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      {%- endif -%}
+    </div>
+
+    <div class="six7-hero__poster">
+      {%- if section.settings.enable_liquid_motion -%}
+        <input
+          class="six7-hero__motion-toggle"
+          type="checkbox"
+          id="Six7Motion-{{ section.id }}"
+          aria-label="Pause background motion"
+        >
+        <label class="six7-hero__motion-control" for="Six7Motion-{{ section.id }}">
+          Pause motion
+        </label>
+      {%- endif -%}
+      <div
+        class="six7-hero__liquid six7-hero__liquid--{{ section.settings.liquid_intensity | default: 'subtle' | escape }} six7-hero__liquid--{{ section.settings.liquid_speed | default: 'slow' | escape }}{% if section.settings.enable_liquid_motion %} six7-hero__liquid--animated{% endif %}"
+        aria-hidden="true"
+      >
+        <svg class="six7-hero__fluid-svg" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" aria-hidden="true">
+          <defs>
+            <linearGradient id="Six7Silver-{{ section.id }}" x1="180" y1="70" x2="830" y2="490" gradientUnits="userSpaceOnUse">
+              <stop stop-color="{{ section.settings.media_background_color }}"/>
+              <stop offset="0.18" stop-color="#B4BBC4"/>
+              <stop offset="0.34" stop-color="#FFFFFF"/>
+              <stop offset="0.43" stop-color="#FFFFFF"/>
+              <stop offset="0.49" stop-color="#929CA9"/>
+              <stop offset="0.56" stop-color="#DCE1E7"/>
+              <stop offset="0.76" stop-color="#F9FAFB"/>
+              <stop offset="1" stop-color="#B5BDC7"/>
+            </linearGradient>
+            <linearGradient id="Six7Pearl-{{ section.id }}" x1="250" y1="300" x2="930" y2="690" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#BCC3CC"/>
+              <stop offset="0.25" stop-color="{{ section.settings.media_background_color }}"/>
+              <stop offset="0.4" stop-color="#FFFFFF"/>
+              <stop offset="0.48" stop-color="#A2ACB8"/>
+              <stop offset="0.6" stop-color="#E6E9ED"/>
+              <stop offset="0.84" stop-color="#FFFFFF"/>
+              <stop offset="1" stop-color="#C4CAD2"/>
+            </linearGradient>
+            <linearGradient id="Six7Reflection-{{ section.id }}" x1="850" y1="0" x2="1110" y2="440" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#FFFFFF"/>
+              <stop offset="0.32" stop-color="#D1D6DC"/>
+              <stop offset="0.49" stop-color="#F5E6E8"/>
+              <stop offset="0.53" stop-color="#E63946" stop-opacity="0.55"/>
+              <stop offset="0.57" stop-color="#F4DADD"/>
+              <stop offset="0.68" stop-color="#FFFFFF"/>
+              <stop offset="1" stop-color="#B8C0CA"/>
+            </linearGradient>
+          </defs>
+          <g class="six7-hero__ribbon six7-hero__ribbon--silver">
+            <path d="M-100 235C80-20 320 0 450 135C555 244 536 342 670 340C848 338 873 89 1270 48L1285 150C967 181 945 440 710 446C489 452 480 289 374 204C255 109 106 116-70 341Z" fill="url(#Six7Silver-{{ section.id }})"/>
+            <path d="M-75 241C94 17 318 30 439 153C551 268 548 366 693 359C871 350 925 117 1265 75" stroke="#FFFFFF" stroke-opacity="0.8" stroke-width="2"/>
+          </g>
+          <g class="six7-hero__ribbon six7-hero__ribbon--pearl">
+            <path d="M-80 475C119 270 290 286 385 416C492 563 581 606 799 457C997 321 1119 433 1280 363L1300 459C1091 556 1010 424 838 553C599 733 424 666 301 493C226 388 113 403-54 582Z" fill="url(#Six7Pearl-{{ section.id }})"/>
+            <path d="M-45 484C135 309 285 323 368 435C487 597 603 625 815 485C1000 361 1125 466 1271 396" stroke="#FFFFFF" stroke-opacity="0.75" stroke-width="2"/>
+          </g>
+          <g class="six7-hero__ribbon six7-hero__ribbon--reflection">
+            <path d="M755-90C1041-6 1100 92 1038 215C975 340 1047 414 1268 452L1280 498C989 452 924 330 991 198C1041 100 957 16 723-38Z" fill="url(#Six7Reflection-{{ section.id }})"/>
+            <path d="M752-62C1014 15 1068 103 1015 208C950 337 1040 440 1269 475" stroke="#FFFFFF" stroke-opacity="0.65" stroke-width="1.5"/>
+          </g>
+        </svg>
+      </div>
+      <div class="six7-hero__artwork" aria-hidden="true">
+        <span class="six7-hero__registration"></span>
+        <span class="six7-hero__label">{{ section.settings.poster_label | escape }}</span>
+        <div class="six7-hero__type">
+          <span class="six7-hero__word six7-hero__word--first">{{ section.settings.poster_line_1 | escape }}</span>
+          <span class="six7-hero__word six7-hero__word--second">{{ section.settings.poster_line_2 | escape }}</span>
+        </div>
+        {%- if hero_image == blank -%}
+          <span class="six7-hero__slash"></span>
+        {%- endif -%}
+      </div>
+      {%- if hero_image != blank -%}
+        <div class="six7-hero__media">
+          <span class="six7-hero__ground-shadow" aria-hidden="true"></span>
+          <picture class="six7-hero__picture">
+            {%- if section.settings.mobile_image != blank -%}
+              <source
+                media="(max-width: 749px)"
+                srcset="
+                  {{ mobile_image | image_url: width: 375 }} 375w,
+                  {{ mobile_image | image_url: width: 550 }} 550w,
+                  {{ mobile_image | image_url: width: 750 }} 750w,
+                  {{ mobile_image | image_url: width: 1100 }} 1100w,
+                  {{ mobile_image | image_url: width: 1500 }} 1500w
+                "
+                sizes="100vw"
+                width="{{ mobile_image.width }}"
+                height="{{ mobile_image.height }}"
+              >
+            {%- endif -%}
+            {{
+              hero_image
+              | image_url: width: 2400
+              | image_tag:
+                class: 'six7-hero__image',
+                widths: '375, 550, 750, 1100, 1500, 1800, 2000, 2400',
+                sizes: '(min-width: 1600px) 1200px, (min-width: 750px) 80vw, 100vw',
+                loading: image_loading,
+                fetchpriority: fetch_priority,
+                alt: image_alt
+            }}
+          </picture>
+        </div>
+      {%- endif -%}
+    </div>
+
+    <div class="six7-hero__footer">
+      <div class="six7-hero__content">
+        <div class="six7-hero__statement">
+          {%- if section.settings.campaign_note != blank -%}
+            <p class="six7-hero__note">{{ section.settings.campaign_note | escape }}</p>
+          {%- endif -%}
+        {%- if section.settings.heading != blank -%}
+          <{{ heading_tag }} class="six7-hero__heading">{{ section.settings.heading | escape }}</{{ heading_tag }}>
+        {%- endif -%}
+        </div>
+        {%- if section.settings.description != blank -%}
+          <p class="six7-hero__description">{{ section.settings.description | escape | newline_to_br }}</p>
+        {%- endif -%}
+      </div>
+      {%- if section.settings.primary_label != blank or section.settings.secondary_label != blank -%}
+        <div class="six7-hero__actions">
+          {%- if section.settings.primary_label != blank -%}
+            <a
+              class="six7-hero__button six7-hero__button--primary"
+              {% if section.settings.primary_url != blank %}
+                href="{{ section.settings.primary_url | escape }}"
+              {% else %}
+                role="link" aria-disabled="true"
+              {% endif %}
+            >
+              <span>{{ section.settings.primary_label | escape }}</span>
+              <span class="six7-hero__arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          {%- endif -%}
+          {%- if section.settings.secondary_label != blank -%}
+            <a
+              class="six7-hero__button six7-hero__button--secondary"
+              {% if section.settings.secondary_url != blank %}
+                href="{{ section.settings.secondary_url | escape }}"
+              {% else %}
+                role="link" aria-disabled="true"
+              {% endif %}
+            >
+              <span>{{ section.settings.secondary_label | escape }}</span>
+              <span class="six7-hero__secondary-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Six&7 hero",
+  "tag": "section",
+  "class": "section-six7-hero",
+  "enabled_on": {
+    "templates": [
+      "index"
+    ]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "SIX&7 / EVERYDAY IN MOTION"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Headline",
+      "default": "BUILT FOR EVERY MOVE.",
+      "info": "The complete, readable headline beneath the artwork. Decorative poster lettering is edited separately."
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Discover footwear designed for everyday confidence and performance."
+    },
+    {
+      "type": "header",
+      "content": "Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Desktop image",
+      "info": "Use a high-resolution transparent sneaker cutout, tightly cropped around the product. The full image is contained over the poster lettering."
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile image",
+      "info": "Optional alternate cutout for the mobile composition. If only one image is selected, it is used on all screens. Without an image, a typographic poster is shown."
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Image description",
+      "info": "Describe the footwear shown. If empty, the main image's alt text is used. Use a description suitable for both crops."
+    },
+    {
+      "type": "header",
+      "content": "Buttons"
+    },
+    {
+      "type": "text",
+      "id": "primary_label",
+      "label": "Primary label",
+      "default": "Shop Collection"
+    },
+    {
+      "type": "url",
+      "id": "primary_url",
+      "label": "Primary link",
+      "default": "/collections/all"
+    },
+    {
+      "type": "text",
+      "id": "secondary_label",
+      "label": "Secondary label",
+      "default": "Explore Our Story"
+    },
+    {
+      "type": "url",
+      "id": "secondary_url",
+      "label": "Secondary link",
+      "info": "Select your brand story page. A button without a link is disabled. Clear its label to hide it."
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "paragraph",
+      "content": "Fonts follow the theme typography settings. Keep text and button colors sufficiently contrasted for readability."
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#111111"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent and primary button",
+      "default": "#E63946"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Primary button text",
+      "default": "#111111"
+    },
+    {
+      "type": "color",
+      "id": "media_background_color",
+      "label": "Poster backdrop",
+      "default": "#F2F2F2"
+    },
+    {
+      "type": "header",
+      "content": "Movement poster"
+    },
+    {
+      "type": "text",
+      "id": "poster_label",
+      "label": "Small poster label",
+      "default": "BUILT FOR"
+    },
+    {
+      "type": "text",
+      "id": "poster_line_1",
+      "label": "Poster first line",
+      "default": "EVERY",
+      "info": "Short words give the strongest composition. Longer text scales down automatically; use Poster type size to fine-tune."
+    },
+    {
+      "type": "text",
+      "id": "poster_line_2",
+      "label": "Poster second line",
+      "default": "MOVE."
+    },
+    {
+      "type": "text",
+      "id": "signature",
+      "label": "Brand signature",
+      "default": "SIX&7"
+    },
+    {
+      "type": "range",
+      "id": "image_angle",
+      "label": "Sneaker angle",
+      "min": -30,
+      "max": 30,
+      "step": 1,
+      "unit": "deg",
+      "default": -16
+    },
+    {
+      "type": "range",
+      "id": "image_scale",
+      "label": "Sneaker size",
+      "min": 70,
+      "max": 110,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_motion",
+      "label": "Enable entrance animation",
+      "default": true,
+      "info": "Automatically disabled when the visitor prefers reduced motion."
+    },
+    {
+      "type": "range",
+      "id": "poster_type_scale",
+      "label": "Poster type size",
+      "min": 80,
+      "max": 110,
+      "step": 5,
+      "unit": "%",
+      "default": 100,
+      "info": "Controls both lines. At larger sizes, small edge crops are intentional; the full headline remains readable below."
+    },
+    {
+      "type": "text",
+      "id": "campaign_note",
+      "label": "Editorial label",
+      "default": "EVERYDAY, RECONSIDERED."
+    },
+    {
+      "type": "header",
+      "content": "Liquid atmosphere"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_liquid_motion",
+      "label": "Enable liquid motion",
+      "default": true,
+      "info": "Adds slow background movement independently of the entrance animation. Disabled motion and reduced-motion preferences retain a static pearlescent background."
+    },
+    {
+      "type": "select",
+      "id": "liquid_intensity",
+      "label": "Motion intensity",
+      "options": [
+        {
+          "value": "subtle",
+          "label": "Subtle"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        }
+      ],
+      "default": "subtle"
+    },
+    {
+      "type": "select",
+      "id": "liquid_speed",
+      "label": "Animation speed",
+      "options": [
+        {
+          "value": "slow",
+          "label": "Slow"
+        },
+        {
+          "value": "normal",
+          "label": "Normal"
+        }
+      ],
+      "default": "slow"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Six&7 hero"
+    }
+  ]
+}
+{% endschema %}

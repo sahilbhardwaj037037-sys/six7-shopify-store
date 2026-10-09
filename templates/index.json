@@ -9,6 +9,22 @@
  */
 {
   "sections": {
+    "six7_hero": {
+      "type": "six7-hero",
+      "settings": {
+        "eyebrow": "SIX&7 / EVERYDAY IN MOTION",
+        "heading": "BUILT FOR EVERY MOVE.",
+        "description": "Discover footwear designed for everyday confidence and performance.",
+        "primary_label": "Shop Collection",
+        "primary_url": "shopify://collections/all",
+        "secondary_label": "Explore Our Story",
+        "background_color": "#FFFFFF",
+        "text_color": "#111111",
+        "accent_color": "#E63946",
+        "button_text_color": "#111111",
+        "media_background_color": "#F3F3F3"
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -78,6 +94,7 @@
     }
   },
   "order": [
+    "six7_hero",
     "image_banner",
     "featured_collection"
   ]
