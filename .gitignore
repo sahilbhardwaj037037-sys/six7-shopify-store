@@ -1,0 +1,31 @@
+# Local Shopify CLI state and environment-specific configuration
+.shopify/
+/shopify.theme.toml
+/shopify.theme.*.toml
+/shopify.cli.yml
+/shopify.cli.yaml
+
+# Local environment variables and Theme Kit credentials
+.env
+.env.*
+/.envrc
+/config.yml
+/config.yaml
+
+# Operating system artifacts
+.DS_Store
+._*
+.Spotlight-V100/
+.Trashes/
+Thumbs.db
+Desktop.ini
+
+# Editor settings and temporary files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.orig
+
+# Theme source, including config/settings_data.json, stays tracked.
