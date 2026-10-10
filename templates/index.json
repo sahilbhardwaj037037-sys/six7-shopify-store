@@ -26,7 +26,7 @@
         "accent_color": "#e63946",
         "button_text_color": "#111111",
         "media_background_color": "#f3f3f3",
-        "poster_label": "BUILT FOR",
+        "poster_label": "BUILT FOR",
         "poster_line_1": "EVERY",
         "poster_line_2": "MOVE.",
         "signature": "SIX&7",
@@ -48,7 +48,7 @@
           "settings": {
             "title": "Men",
             "image": "shopify://shop_images/pexels-augusto-silveira-579582076-17430802.jpg",
-            "collection": "",
+            "collection": "men",
             "cta_label": "Explore"
           }
         },
@@ -57,7 +57,7 @@
           "settings": {
             "title": "Women",
             "image": "shopify://shop_images/pexels-daniel-duarte-270529097-15349649.jpg",
-            "collection": "",
+            "collection": "women",
             "cta_label": "Explore"
           }
         },
@@ -66,7 +66,7 @@
           "settings": {
             "title": "Kids",
             "image": "shopify://shop_images/pexels-aslam-athanikkal-460303334-18570016.jpg",
-            "collection": "",
+            "collection": "kids",
             "cta_label": "Explore"
           }
         },
@@ -75,7 +75,7 @@
           "settings": {
             "title": "Sports",
             "image": "shopify://shop_images/pexels-public-domain-pictures-274385.jpg",
-            "collection": "",
+            "collection": "sports",
             "cta_label": "Explore"
           }
         }
