@@ -1,0 +1,170 @@
+{{ 'six7-categories.css' | asset_url | stylesheet_tag }}
+
+<section class="six7-categories" aria-labelledby="Six7CategoriesHeading-{{ section.id }}">
+  <div class="six7-categories__inner page-width">
+    {%- if section.settings.heading != blank or section.settings.intro != blank -%}
+      <header class="six7-categories__header">
+        {%- if section.settings.eyebrow != blank -%}
+          <p class="six7-categories__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+        {%- endif -%}
+        {%- if section.settings.heading != blank -%}
+          <h2 id="Six7CategoriesHeading-{{ section.id }}" class="six7-categories__heading">
+            {{ section.settings.heading | escape }}
+          </h2>
+        {%- endif -%}
+        {%- if section.settings.intro != blank -%}
+          <p class="six7-categories__intro">{{ section.settings.intro | escape }}</p>
+        {%- endif -%}
+      </header>
+    {%- endif -%}
+
+    <div class="six7-categories__grid">
+      {%- for block in section.blocks -%}
+        {%- liquid
+          assign category_image = block.settings.image
+          assign mobile_image = block.settings.mobile_image | default: category_image
+          assign category_title = block.settings.title | default: 'Category'
+          assign placeholder_index = forloop.index0 | modulo: 4 | plus: 1
+          assign placeholder_class = 'six7-categories__placeholder--' | append: placeholder_index
+        -%}
+        <article
+          class="six7-category six7-category--{{ forloop.index }}{% if category_image == blank %} six7-category--placeholder{% endif %}"
+          {{ block.shopify_attributes }}
+        >
+          {%- if block.settings.collection != blank -%}
+            <a
+              class="six7-category__link"
+              href="{{ block.settings.collection.url }}"
+              aria-label="{{ category_title | escape }}"
+            >
+          {%- else -%}
+            <div class="six7-category__link">
+          {%- endif -%}
+              <div class="six7-category__media">
+                {%- if category_image != blank -%}
+                  <picture>
+                    {%- if block.settings.mobile_image != blank -%}
+                      <source
+                        media="(max-width: 749px)"
+                        srcset="
+                          {{ mobile_image | image_url: width: 550 }} 550w,
+                          {{ mobile_image | image_url: width: 750 }} 750w,
+                          {{ mobile_image | image_url: width: 1100 }} 1100w
+                        "
+                        sizes="100vw"
+                      >
+                    {%- endif -%}
+                    {{
+                      category_image
+                      | image_url: width: 1800
+                      | image_tag:
+                        class: 'six7-category__image',
+                        widths: '375, 550, 750, 1100, 1500, 1800',
+                        sizes: '(min-width: 990px) 50vw, 100vw',
+                        loading: 'lazy',
+                        alt: category_title
+                    }}
+                  </picture>
+                {%- else -%}
+                  <span class="six7-categories__placeholder {{ placeholder_class }}" aria-hidden="true">
+                    <span class="six7-categories__placeholder-shape"></span>
+                  </span>
+                {%- endif -%}
+                <span class="six7-category__wash" aria-hidden="true"></span>
+              </div>
+              <div class="six7-category__content">
+                <span class="six7-category__index">0{{ forloop.index }}</span>
+                <h3 class="six7-category__title">{{ category_title | escape }}</h3>
+                {%- if block.settings.cta_label != blank and block.settings.collection != blank -%}
+                  <span class="six7-category__cta">
+                    {{ block.settings.cta_label | escape }}
+                    <span aria-hidden="true">↗</span>
+                  </span>
+                {%- endif -%}
+              </div>
+          {%- if block.settings.collection != blank -%}
+            </a>
+          {%- else -%}
+            </div>
+          {%- endif -%}
+        </article>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Six&7 categories",
+  "tag": "section",
+  "class": "section section-six7-categories",
+  "max_blocks": 4,
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "THE EDIT / 01"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Find your movement."
+    },
+    {
+      "type": "textarea",
+      "id": "intro",
+      "label": "Intro",
+      "default": "Four ways to move through the world. Built with intention."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "Category",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Category title",
+          "default": "Men"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile image",
+          "info": "Optional. Replaces the image on screens smaller than 750px."
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "text",
+          "id": "cta_label",
+          "label": "CTA label",
+          "default": "Explore"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Six&7 categories",
+      "blocks": [
+        { "type": "category", "settings": { "title": "Men" } },
+        { "type": "category", "settings": { "title": "Women" } },
+        { "type": "category", "settings": { "title": "Kids" } },
+        { "type": "category", "settings": { "title": "Sports" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

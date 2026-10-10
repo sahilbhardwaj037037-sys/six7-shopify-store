@@ -15,14 +15,81 @@
         "eyebrow": "SIX&7 / EVERYDAY IN MOTION",
         "heading": "BUILT FOR EVERY MOVE.",
         "description": "Discover footwear designed for everyday confidence and performance.",
+        "desktop_image": "shopify://shop_images/Futuristic_Black_and_Silver_Athletic_Sneaker.png",
+        "image_alt": "",
         "primary_label": "Shop Collection",
         "primary_url": "shopify://collections/all",
         "secondary_label": "Explore Our Story",
-        "background_color": "#FFFFFF",
+        "secondary_url": "",
+        "background_color": "#ffffff",
         "text_color": "#111111",
-        "accent_color": "#E63946",
+        "accent_color": "#e63946",
         "button_text_color": "#111111",
-        "media_background_color": "#F3F3F3"
+        "media_background_color": "#f3f3f3",
+        "poster_label": "BUILT FOR",
+        "poster_line_1": "EVERY",
+        "poster_line_2": "MOVE.",
+        "signature": "SIX&7",
+        "image_angle": -16,
+        "image_scale": 100,
+        "enable_motion": true,
+        "poster_type_scale": 100,
+        "campaign_note": "EVERYDAY, RECONSIDERED.",
+        "enable_liquid_motion": true,
+        "liquid_intensity": "medium",
+        "liquid_speed": "normal"
+      }
+    },
+    "six7_categories": {
+      "type": "six7-categories",
+      "blocks": {
+        "men": {
+          "type": "category",
+          "settings": {
+            "title": "Men",
+            "image": "shopify://shop_images/pexels-augusto-silveira-579582076-17430802.jpg",
+            "collection": "",
+            "cta_label": "Explore"
+          }
+        },
+        "women": {
+          "type": "category",
+          "settings": {
+            "title": "Women",
+            "image": "shopify://shop_images/pexels-daniel-duarte-270529097-15349649.jpg",
+            "collection": "",
+            "cta_label": "Explore"
+          }
+        },
+        "kids": {
+          "type": "category",
+          "settings": {
+            "title": "Kids",
+            "image": "shopify://shop_images/pexels-aslam-athanikkal-460303334-18570016.jpg",
+            "collection": "",
+            "cta_label": "Explore"
+          }
+        },
+        "sports": {
+          "type": "category",
+          "settings": {
+            "title": "Sports",
+            "image": "shopify://shop_images/pexels-public-domain-pictures-274385.jpg",
+            "collection": "",
+            "cta_label": "Explore"
+          }
+        }
+      },
+      "block_order": [
+        "men",
+        "women",
+        "kids",
+        "sports"
+      ],
+      "settings": {
+        "eyebrow": "THE EDIT / 01",
+        "heading": "Find your movement.",
+        "intro": "Four ways to move through the world. Built with intention."
       }
     },
     "image_banner": {
@@ -54,33 +121,32 @@
       "settings": {
         "image_overlay_opacity": 40,
         "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
         "image_behavior": "none",
+        "desktop_content_position": "bottom-center",
         "desktop_content_alignment": "center",
+        "show_text_box": false,
         "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
         "show_text_below": false
       }
     },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
+        "collection": "all",
+        "products_to_show": 8,
         "title": "Featured products",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
         "columns_desktop": 4,
-        "color_scheme": "scheme-1",
+        "enable_desktop_slider": false,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
+        "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -88,6 +154,7 @@
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 44,
         "padding_bottom": 36
       }
@@ -95,6 +162,7 @@
   },
   "order": [
     "six7_hero",
+    "six7_categories",
     "image_banner",
     "featured_collection"
   ]
