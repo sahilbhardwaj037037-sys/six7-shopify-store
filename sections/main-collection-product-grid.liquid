@@ -1,6 +1,7 @@
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'six7-collection.css' | asset_url | stylesheet_tag }}
 
 {% if section.settings.image_shape == 'blob' %}
   {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
@@ -36,7 +37,15 @@
   }
 {%- endstyle -%}
 
+{%- liquid
+  assign card_image_ratio = section.settings.image_ratio
+  if section.settings.uniform_product_images
+    assign card_image_ratio = 'square'
+  endif
+-%}
+
 <collection-component
+  class="six7-collection-grid"
   view-event-payload="{{ collection | standard_event_data: 'view' | escape }}"
   data-collection-id="{{ collection.id }}"
 >
@@ -106,7 +115,7 @@
         <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
         {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
           <aside
-            aria-labelledby="verticalTitle"
+            aria-label="{{ 'products.facets.filter_and_sort' | t | escape }}"
             class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
             id="main-collection-filters"
             data-id="{{ section.id }}"
@@ -134,11 +143,13 @@
               <div class="title-wrapper center">
                 <h2 class="title title--primary">
                   {{ 'sections.collection_template.empty' | t -}}
-                  <br>
-                  {{
-                    'sections.collection_template.use_fewer_filters_html'
-                    | t: link: collection.url, class: 'underlined-link link'
-                  }}
+                  {%- if collection.all_products_count > 0 -%}
+                    <br>
+                    {{
+                      'sections.collection_template.use_fewer_filters_html'
+                      | t: link: collection.url, class: 'underlined-link link'
+                    }}
+                  {%- endif -%}
                 </h2>
               </div>
             </div>
@@ -149,6 +160,7 @@
               <div class="loading-overlay gradient"></div>
               <ul
                 id="product-grid"
+                role="list"
                 data-id="{{ section.id }}"
                 class="
                   grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
@@ -171,7 +183,7 @@
                   >
                     {% render 'card-product',
                       card_product: product,
-                      media_aspect_ratio: section.settings.image_ratio,
+                      media_aspect_ratio: card_image_ratio,
                       image_shape: section.settings.image_shape,
                       show_secondary_image: section.settings.show_secondary_image,
                       show_vendor: section.settings.show_vendor,
@@ -250,6 +262,13 @@
     {
       "type": "header",
       "content": "t:sections.main-collection-product-grid.settings.header__3.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "uniform_product_images",
+      "label": "Use uniform product images",
+      "default": true,
+      "info": "Use square image frames without cropping footwear. Turn off to use the image ratio below."
     },
     {
       "type": "select",
