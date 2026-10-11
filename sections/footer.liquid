@@ -1,5 +1,6 @@
 {% comment %}theme-check-disable UndefinedObject{% endcomment %}
 {{ 'section-footer.css' | asset_url | stylesheet_tag }}
+{{ 'six7-footer.css' | asset_url | stylesheet_tag }}
 {{ 'component-newsletter.css' | asset_url | stylesheet_tag }}
 {{ 'component-list-menu.css' | asset_url | stylesheet_tag }}
 {{ 'component-list-payment.css' | asset_url | stylesheet_tag }}
@@ -27,7 +28,29 @@
   }
 {%- endstyle -%}
 
-<footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+<footer class="six7-footer footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+  {%- if section.settings.brand_signature != blank or section.settings.brand_statement != blank or section.settings.polish_menu != blank -%}
+    <div class="six7-footer__rail page-width">
+      <div class="six7-footer__identity">
+        {%- if section.settings.brand_signature != blank -%}
+          <p class="six7-footer__signature">{{ section.settings.brand_signature | escape }}</p>
+        {%- endif -%}
+        {%- if section.settings.brand_statement != blank -%}
+          <div class="six7-footer__statement rte">{{ section.settings.brand_statement }}</div>
+        {%- endif -%}
+      </div>
+      {%- if section.settings.polish_menu != blank -%}
+        <nav class="six7-footer__navigation" aria-label="{{ section.settings.navigation_label | default: section.settings.polish_menu.title | escape }}">
+          <p class="six7-footer__label">{{ section.settings.navigation_label | default: section.settings.polish_menu.title | escape }}</p>
+          <ul role="list" class="list-unstyled">
+            {%- for link in section.settings.polish_menu.links -%}
+              <li><a href="{{ link.url }}"{% if link.current %} aria-current="page"{% endif %}>{{ link.title | escape }}</a></li>
+            {%- endfor -%}
+          </ul>
+        </nav>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
   {%- liquid
     assign has_social_icons = true
     if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
@@ -424,6 +447,11 @@
     }
   ],
   "settings": [
+    {"type": "header", "content": "Six&7 brand rail"},
+    {"type": "text", "id": "brand_signature", "label": "Signature", "default": "SIX&7"},
+    {"type": "richtext", "id": "brand_statement", "label": "Brand statement", "default": "<p>Everyday style. Always in motion.</p>"},
+    {"type": "link_list", "id": "polish_menu", "label": "Explore menu", "default": "main-menu"},
+    {"type": "text", "id": "navigation_label", "label": "Navigation label", "default": "Explore"},
     {
       "type": "color_scheme",
       "id": "color_scheme",

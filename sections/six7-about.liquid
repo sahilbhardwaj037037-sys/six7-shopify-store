@@ -1,0 +1,73 @@
+{{ 'six7-pages.css' | asset_url | stylesheet_tag }}
+
+<div class="six7-about color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width">
+    <div class="six7-about__lead">
+      <div class="six7-about__intro">
+        {%- if section.settings.eyebrow != blank -%}
+          <p class="six7-page-eyebrow">{{ section.settings.eyebrow | escape }}</p>
+        {%- endif -%}
+        <h1 class="six7-about__heading">{{ section.settings.heading | default: page.title | escape | newline_to_br }}</h1>
+        {%- if section.settings.intro != blank -%}
+          <div class="six7-about__copy rte">{{ section.settings.intro }}</div>
+        {%- endif -%}
+        {%- if section.settings.cta_label != blank -%}
+          <a class="six7-page-button button" href="{{ section.settings.cta_url | default: routes.all_products_collection_url }}">
+            {{ section.settings.cta_label | escape }}
+            <span class="svg-wrapper" aria-hidden="true">{{ 'icon-arrow.svg' | inline_asset_content }}</span>
+          </a>
+        {%- endif -%}
+      </div>
+      <div class="six7-about__art">
+        {%- if section.settings.image != blank -%}
+          {{ section.settings.image | image_url: width: 1600 | image_tag: widths: '360, 540, 750, 1100, 1600', sizes: '(min-width: 990px) 50vw, 100vw', loading: 'lazy', class: 'six7-about__image' }}
+        {%- else -%}
+          <div class="six7-about__poster" aria-hidden="true">
+            <span class="six7-about__poster-note">{{ section.settings.poster_note | escape }}</span>
+            <span class="six7-about__wordmark">6<span>&amp;</span>7</span>
+            <span class="six7-about__poster-line">{{ section.settings.poster_line | escape }}</span>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+    {%- if page.content != blank -%}
+      <div class="six7-about__merchant rte">{{ page.content }}</div>
+    {%- endif -%}
+    {%- if section.blocks.size > 0 -%}
+      <div class="six7-about__principles">
+        {%- for block in section.blocks -%}
+          <div class="six7-about__principle" {{ block.shopify_attributes }}>
+            <span class="six7-about__index" aria-hidden="true">{{ forloop.index | prepend: '0' }}</span>
+            <h2>{{ block.settings.heading | escape }}</h2>
+            <div class="rte">{{ block.settings.text }}</div>
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Six&7 About",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {"groups": ["header", "footer"]},
+  "settings": [
+    {"type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "THE SIX&7 POINT OF VIEW"},
+    {"type": "textarea", "id": "heading", "label": "Heading", "default": "EVERYDAY,\nIN MOTION."},
+    {"type": "richtext", "id": "intro", "label": "Introduction", "default": "<p>Six&7 is a demo footwear brand built around a simple idea: everyday style, always in motion.</p><p>Our point of view brings a clean sneaker aesthetic to the different ways we move — from daily routines to time spent outdoors.</p>"},
+    {"type": "image_picker", "id": "image", "label": "Editorial image", "info": "Optional. A typographic Six&7 poster appears when no image is selected."},
+    {"type": "text", "id": "poster_note", "label": "Poster top line", "default": "SIX&7 / FOOTWEAR & EVERYDAY CULTURE"},
+    {"type": "text", "id": "poster_line", "label": "Poster bottom line", "default": "YOUR PACE. YOUR POINT OF VIEW."},
+    {"type": "text", "id": "cta_label", "label": "Button label", "default": "Explore the collection"},
+    {"type": "url", "id": "cta_url", "label": "Button link", "info": "Defaults to all products when left blank."},
+    {"type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1"}
+  ],
+  "blocks": [{"type": "principle", "name": "Brand principle", "limit": 6, "settings": [
+    {"type": "text", "id": "heading", "label": "Heading", "default": "An everyday perspective"},
+    {"type": "richtext", "id": "text", "label": "Text", "default": "<p>Style that leaves room for your own point of view.</p>"}
+  ]}],
+  "presets": [{"name": "Six&7 About", "blocks": [{"type": "principle"}, {"type": "principle"}, {"type": "principle"}]}]
+}
+{% endschema %}

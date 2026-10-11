@@ -34,3 +34,22 @@
     font-size: 1.7rem;
   }
 }
+
+/* Phase 6: keep native menus and utility actions; refine their rhythm. */
+.section-header .header { column-gap: clamp(1.2rem, 2vw, 2.8rem); }
+.section-header .header__inline-menu > .list-menu { column-gap: 0.4rem; }
+.section-header .header__inline-menu .header__menu-item { min-height: 4.4rem; }
+.section-header .header__submenu { border-radius: 0; padding-block: 1rem; }
+.section-header .header__submenu .header__menu-item { font-size: 1.2rem; letter-spacing: 0.03em; }
+.section-header .menu-drawer__navigation { padding-block: 2rem; }
+.section-header .menu-drawer__menu-item { min-height: 5.2rem; font: 600 1.6rem/1.5 var(--six7-font-body); letter-spacing: 0.02em; padding-block: 1.5rem; overflow-wrap: anywhere; }
+.section-header .menu-drawer__menu-item--active { border-inline-start: 2px solid rgb(var(--six7-color-red)); }
+.section-header .menu-drawer__close-button { min-height: 4.8rem; font-family: var(--six7-font-body); }
+.section-header .menu-drawer__utility-links { padding-block: 2rem; }
+.section-header .header__heading-link:focus-visible, .section-header .header__menu-item:focus-visible, .section-header .menu-drawer__menu-item:focus-visible { outline: 2px solid rgb(var(--color-foreground)); outline-offset: 2px; }
+@media screen and (max-width: 749px) {
+  .section-header .header { column-gap: 0.8rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .section-header .menu-drawer, .section-header .menu-drawer__submenu { transition: none; }
+}

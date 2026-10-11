@@ -1,0 +1,62 @@
+/* About and Contact only; retain Dawn form behavior and merchant content. */
+.six7-page-eyebrow {
+  border-inline-start: 2px solid rgb(var(--six7-color-red));
+  font: 600 1.1rem/1.5 var(--six7-font-body);
+  letter-spacing: 0.13em;
+  margin: 0 0 2rem;
+  padding-inline-start: 1rem;
+  text-transform: uppercase;
+}
+.six7-about { padding-block: clamp(4rem, 7vw, 8rem); }
+.six7-about__lead { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(3.2rem, 5vw, 7.2rem); align-items: center; }
+.six7-about__heading { font: 700 clamp(3.8rem, 5.8vw, 7rem)/0.97 var(--six7-font-display); letter-spacing: -0.055em; margin: 0 0 2.8rem; overflow-wrap: anywhere; }
+.six7-about__copy { font: 400 1.6rem/1.75 var(--six7-font-body); max-width: 44ch; }
+.six7-about__copy p:first-child { margin-top: 0; }
+.six7-page-button { --buttons-radius: 0; --buttons-radius-outset: 0; --buttons-shadow-opacity: 0; gap: 2.4rem; font: 600 1.2rem/1.5 var(--six7-font-body); letter-spacing: 0.06em; min-height: 5rem; margin-top: 1.6rem; text-transform: uppercase; max-width: 100%; }
+.six7-about__art { background: rgb(var(--six7-color-silver)); min-width: 0; overflow: hidden; aspect-ratio: 4 / 5; }
+.six7-about__image { display: block; width: 100%; height: 100%; object-fit: cover; }
+.six7-about__poster { display: flex; flex-direction: column; justify-content: space-between; height: 100%; padding: clamp(1.6rem, 3vw, 3.6rem); color: rgb(var(--six7-color-ink)); }
+.six7-about__poster-note, .six7-about__poster-line { font: 600 1rem/1.5 var(--six7-font-body); letter-spacing: 0.12em; overflow-wrap: anywhere; }
+.six7-about__poster-note { border-top: 2px solid rgb(var(--six7-color-red)); padding-top: 1.6rem; }
+.six7-about__wordmark { font: 700 clamp(7rem, 12vw, 16rem)/1 var(--six7-font-display); letter-spacing: -0.08em; white-space: nowrap; }
+.six7-about__wordmark span { color: rgb(var(--six7-color-red)); }
+.six7-about__merchant { border-top: 1px solid rgba(var(--color-foreground), 0.12); margin-top: 5rem; padding-top: 3rem; max-width: 70ch; }
+.six7-about__principles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3.2rem; margin-top: clamp(4.8rem, 7vw, 8rem); }
+.six7-about__principle { border-top: 1px solid rgba(var(--color-foreground), 0.2); padding-top: 2rem; min-width: 0; }
+.six7-about__index { font: 600 1.1rem/1.5 var(--six7-font-body); color: rgba(var(--color-foreground), 0.7); }
+.six7-about__principle h2 { font: 700 1.8rem/1.25 var(--six7-font-display); letter-spacing: -0.025em; margin: 2rem 0 1.4rem; overflow-wrap: anywhere; }
+.six7-about__principle .rte { font: 400 1.4rem/1.7 var(--six7-font-body); }
+.six7-page-intro.page-width--narrow { max-width: var(--page-width); }
+.six7-page-intro .main-page-title { font: 700 clamp(3.6rem, 6vw, 6.8rem)/1 var(--six7-font-display); letter-spacing: -0.055em; margin-block: 1.6rem 2rem; overflow-wrap: anywhere; text-transform: uppercase; }
+.six7-page-intro .rte { max-width: 65ch; font: 400 1.5rem/1.7 var(--six7-font-body); }
+.six7-contact__layout { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: clamp(3.2rem, 6vw, 8rem); border-top: 1px solid rgba(var(--color-foreground), 0.15); padding-top: clamp(2.8rem, 4vw, 4.8rem); }
+.six7-contact__heading { font: 700 clamp(2.8rem, 3.5vw, 4.2rem)/1.05 var(--six7-font-display); letter-spacing: -0.04em; margin: 0 0 2rem; max-width: 13ch; overflow-wrap: anywhere; }
+.six7-contact__copy { max-width: 38ch; font: 400 1.5rem/1.75 var(--six7-font-body); }
+.six7-text-link { color: rgb(var(--color-foreground)); display: inline-block; font: 600 1.3rem/1.6 var(--six7-font-body); margin-top: 1.6rem; min-height: 4.4rem; overflow-wrap: anywhere; text-underline-offset: 0.5rem; }
+.six7-contact__form { min-width: 0; }
+.six7-contact .field { --inputs-radius: 0; --inputs-border-opacity: 0.25; --inputs-shadow-opacity: 0; }
+.six7-contact .field__input { font-size: 1.5rem; }
+.six7-contact .field__input:focus { outline-color: rgb(var(--color-foreground)); }
+.six7-contact textarea { min-height: 18rem; resize: vertical; }
+.six7-contact .contact__button { margin-top: 2rem; }
+.six7-contact .contact__button .button { --buttons-radius: 0; --buttons-radius-outset: 0; min-height: 5rem; min-width: 18rem; font: 600 1.2rem/1.5 var(--six7-font-body); letter-spacing: 0.1em; text-transform: uppercase; }
+.six7-contact .form-status { font-size: 1.4rem; overflow-wrap: anywhere; }
+.six7-about a:focus-visible, .six7-contact a:focus-visible { outline: 2px solid rgb(var(--color-foreground)); outline-offset: 4px; }
+@media screen and (max-width: 989px) {
+  .six7-about__lead { gap: 3rem; }
+  .six7-about__heading { font-size: clamp(3.4rem, 5.5vw, 5rem); }
+  .six7-contact__layout { grid-template-columns: minmax(0, 1fr); }
+  .six7-contact__heading { max-width: 22ch; }
+}
+@media screen and (max-width: 749px) {
+  .six7-about__lead, .six7-about__principles { grid-template-columns: minmax(0, 1fr); }
+  .six7-about__art { aspect-ratio: 1; }
+  .six7-about__heading { font-size: clamp(3.6rem, 10vw, 5.6rem); }
+  .six7-about__wordmark { font-size: clamp(9rem, 29vw, 18rem); }
+  .six7-about__principles { gap: 2.4rem; }
+  .six7-contact .field__input { font-size: 1.6rem; }
+  .six7-contact .contact__button .button { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .six7-about .button, .six7-contact .button { transition: none; }
+}

@@ -1,4 +1,7 @@
 {{ 'section-main-page.css' | asset_url | stylesheet_tag }}
+{%- if template.suffix == 'contact' -%}
+  {{ 'six7-pages.css' | asset_url | stylesheet_tag }}
+{%- endif -%}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -14,7 +17,7 @@
   }
 {%- endstyle -%}
 
-<div class="page-width page-width--narrow section-{{ section.id }}-padding">
+<div class="{% if template.suffix == 'contact' %}six7-page-intro {% endif %}page-width page-width--narrow section-{{ section.id }}-padding">
   <h1 class="main-page-title page-title h0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
     {{ page.title | escape }}
   </h1>

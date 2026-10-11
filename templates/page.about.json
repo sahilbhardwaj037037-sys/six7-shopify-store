@@ -1,0 +1,15 @@
+{
+  "sections": {
+    "main": {
+      "type": "six7-about",
+      "blocks": {
+        "perspective": {"type": "principle", "settings": {"heading": "A CLEAN POINT OF VIEW.", "text": "<p>Simple lines, a considered palette and space for personal expression. That is the Six&7 aesthetic.</p>"}},
+        "movement": {"type": "principle", "settings": {"heading": "ROOM TO MOVE.", "text": "<p>Men, women, kids and sports: four perspectives on footwear, connected by everyday movement.</p>"}},
+        "individuality": {"type": "principle", "settings": {"heading": "MAKE IT YOURS.", "text": "<p>A sneaker is part of a wider story. How you wear it, where you take it and what you pair it with are yours to decide.</p>"}}
+      },
+      "block_order": ["perspective", "movement", "individuality"],
+      "settings": {}
+    }
+  },
+  "order": ["main"]
+}

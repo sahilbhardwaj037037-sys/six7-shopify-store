@@ -1,4 +1,5 @@
 {{ 'section-contact-form.css' | asset_url | stylesheet_tag }}
+{{ 'six7-pages.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -14,8 +15,24 @@
   }
 {%- endstyle -%}
 
-<div class="color-{{ section.settings.color_scheme }} gradient">
-  <div class="contact page-width page-width--narrow section-{{ section.id }}-padding">
+<div class="six7-contact color-{{ section.settings.color_scheme }} gradient">
+  <div class="contact page-width section-{{ section.id }}-padding">
+    <div class="six7-contact__layout">
+      <div class="six7-contact__intro">
+        {%- if section.settings.eyebrow != blank -%}
+          <p class="six7-page-eyebrow">{{ section.settings.eyebrow | escape }}</p>
+        {%- endif -%}
+        {%- if section.settings.intro_heading != blank -%}
+          <h2 class="six7-contact__heading">{{ section.settings.intro_heading | escape }}</h2>
+        {%- endif -%}
+        {%- if section.settings.intro != blank -%}
+          <div class="rte six7-contact__copy">{{ section.settings.intro }}</div>
+        {%- endif -%}
+        {%- if section.settings.contact_email != blank -%}
+          <a class="six7-text-link" href="mailto:{{ section.settings.contact_email | escape }}">{{ section.settings.contact_email | escape }}</a>
+        {%- endif -%}
+      </div>
+      <div class="six7-contact__form">
     {%- if section.settings.heading != blank -%}
       <h2 class="title title-wrapper--no-top-margin inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         {{ section.settings.heading }}
@@ -132,6 +149,8 @@
         </button>
       </div>
     {%- endform -%}
+      </div>
+    </div>
   </div>
 </div>
 
@@ -144,6 +163,10 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {"type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "LET’S TALK"},
+    {"type": "text", "id": "intro_heading", "label": "Introduction heading", "default": "A GOOD CONVERSATION STARTS HERE."},
+    {"type": "richtext", "id": "intro", "label": "Introduction", "default": "<p>Questions about fit, the collection or an order? Send us a note.</p><p>For order questions, include your order number so we can understand your request.</p>"},
+    {"type": "text", "id": "contact_email", "label": "Contact email", "info": "Optional. Enter your real customer-support email address."},
     {
       "type": "inline_richtext",
       "id": "heading",

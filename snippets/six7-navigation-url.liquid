@@ -1,0 +1,29 @@
+{%- comment -%}
+  Render a menu URL. About uses the existing premium template in this theme,
+  preserving its editor settings without changing the store-wide assignment.
+  Usage: render 'six7-navigation-url', menu_link: link
+{%- endcomment -%}
+{%- liquid
+  assign navigation_url = menu_link.url
+  assign about_page = pages['about-us']
+  assign is_about = false
+  if menu_link.type == 'page_link' and menu_link.object.handle == 'about-us'
+    assign is_about = true
+  elsif about_page != blank and navigation_url == about_page.url
+    assign is_about = true
+  endif
+
+  if is_about
+    assign url_parts = navigation_url | split: '#'
+    assign navigation_url = url_parts.first
+    if navigation_url contains '?'
+      assign navigation_url = navigation_url | append: '&view=about'
+    else
+      assign navigation_url = navigation_url | append: '?view=about'
+    endif
+    if url_parts.size > 1
+      assign navigation_url = navigation_url | append: '#' | append: url_parts.last
+    endif
+  endif
+  echo navigation_url | escape
+-%}

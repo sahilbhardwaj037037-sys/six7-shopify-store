@@ -1,0 +1,29 @@
+/* Footer styling only. Dawn menus, newsletter, policies and localization stay native. */
+.six7-footer { border-top: 1px solid rgba(var(--color-foreground), 0.15); }
+.six7-footer__rail { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 4rem; padding-block: 2rem 4rem; }
+.six7-footer__signature { font: 700 clamp(4rem, 6vw, 7rem)/0.95 var(--six7-font-display); letter-spacing: -0.065em; margin: 0 0 1.8rem; overflow-wrap: anywhere; }
+.six7-footer__statement { font: 400 1.4rem/1.7 var(--six7-font-body); max-width: 32ch; }
+.six7-footer__statement p { margin: 0; }
+.six7-footer__label, .six7-footer .footer-block__heading { font: 600 1.2rem/1.5 var(--six7-font-body); letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 1.4rem; }
+.six7-footer__label { border-inline-start: 2px solid rgb(var(--six7-color-red)); padding-inline-start: 1rem; }
+.six7-footer__navigation ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.4rem 2rem; }
+.six7-footer__navigation a { color: rgb(var(--color-foreground)); display: inline-flex; align-items: center; min-height: 4.4rem; font: 500 1.3rem/1.5 var(--six7-font-body); text-decoration: none; overflow-wrap: anywhere; }
+.six7-footer__navigation a:hover, .six7-footer .list-menu__item--link:hover { text-decoration: underline; text-decoration-color: rgb(var(--six7-color-red)); text-underline-offset: 0.5rem; }
+.six7-footer .footer__content-top { padding-bottom: 3.6rem; }
+.six7-footer .footer__blocks-wrapper { border-top: 1px solid rgba(var(--color-foreground), 0.12); padding-top: 3rem; }
+.six7-footer .footer-block__details-content { font: 400 1.3rem/1.7 var(--six7-font-body); }
+.six7-footer .list-menu__item--link { min-height: 4.4rem; }
+.six7-footer .footer-block--newsletter { border-top: 1px solid rgba(var(--color-foreground), 0.12); padding-top: 3rem; justify-content: space-between; gap: 2.4rem; }
+.six7-footer .footer-block__newsletter { text-align: start; flex-grow: 0; width: min(100%, 48rem); }
+.six7-footer .newsletter-form { align-items: stretch; max-width: none; }
+.six7-footer .newsletter-form__field-wrapper { max-width: none; }
+.six7-footer .field { --inputs-radius: 0; --inputs-shadow-opacity: 0; }
+.six7-footer .footer__content-bottom { padding-top: 2rem; }
+.six7-footer .copyright__content { font-size: 1.1rem; letter-spacing: 0; }
+.six7-footer a:focus-visible { outline: 2px solid rgb(var(--color-foreground)); outline-offset: 3px; }
+@media screen and (max-width: 749px) {
+  .six7-footer__rail { grid-template-columns: minmax(0, 1fr); gap: 3rem; }
+  .six7-footer .footer__content-top { padding-inline: 1.5rem; }
+  .six7-footer .footer-block--newsletter { align-items: flex-start; flex-direction: column; }
+  .six7-footer .footer__content-bottom-wrapper { justify-content: flex-start; }
+}
