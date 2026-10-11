@@ -54,6 +54,22 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "six7_shipping": {
+          "type": "six7_policy",
+          "settings": {
+            "heading": "Shipping Information",
+            "policy": "shipping",
+            "content": ""
+          }
+        },
+        "six7_returns": {
+          "type": "six7_policy",
+          "settings": {
+            "heading": "Returns & Exchanges",
+            "policy": "returns",
+            "content": ""
+          }
         }
       },
       "block_order": [
@@ -64,22 +80,25 @@
         "quantity_selector",
         "buy_buttons",
         "description",
+        "six7_shipping",
+        "six7_returns",
         "share"
       ],
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
-        "media_size": "large",
+        "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "contain",
-        "gallery_layout": "stacked",
-        "mobile_thumbnails": "hide",
+        "gallery_layout": "thumbnail_slider",
+        "mobile_thumbnails": "show",
         "media_position": "left",
         "image_zoom": "lightbox",
         "hide_variants": true,
         "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 12
+        "padding_top": 48,
+        "padding_bottom": 40,
+        "enable_six7_design": true
       }
     },
     "disclosures": {
