@@ -1,0 +1,190 @@
+/* Homepage only: reuse Dawn cards, pricing, sliders and merchant settings. */
+.six7-lineup {
+  --grid-desktop-horizontal-spacing: clamp(1.6rem, 2.4vw, 3.2rem);
+  --grid-desktop-vertical-spacing: 4rem;
+  --grid-mobile-horizontal-spacing: 1.2rem;
+  --grid-mobile-vertical-spacing: 2.8rem;
+}
+
+.six7-lineup .collection__title.title-wrapper {
+  display: block;
+  margin-bottom: clamp(2.4rem, 4vw, 4rem);
+}
+
+.six7-lineup__eyebrow {
+  border-inline-start: 2px solid rgb(var(--six7-color-red));
+  color: rgb(var(--color-foreground));
+  font: 600 1.1rem/1.5 var(--six7-font-body);
+  letter-spacing: 0.14em;
+  margin: 0 0 1.6rem;
+  padding-inline-start: 1rem;
+  text-transform: uppercase;
+}
+
+.six7-lineup .collection__title .title {
+  font-family: var(--six7-font-display);
+  font-weight: 700;
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+  margin: 0;
+  overflow-wrap: anywhere;
+  text-transform: uppercase;
+}
+
+/* Keep Dawn's heading size selection useful in the theme editor. */
+.six7-lineup .collection__title .title.h2 { font-size: clamp(3.2rem, 5vw, 5rem); }
+.six7-lineup .collection__title .title.h1 { font-size: clamp(3.6rem, 6vw, 6rem); }
+.six7-lineup .collection__title .title.h0 { font-size: clamp(4rem, 7vw, 7rem); }
+.six7-lineup .collection__title .title.hxl { font-size: clamp(4.4rem, 8vw, 8rem); }
+.six7-lineup .collection__title .title.hxxl { font-size: clamp(4.8rem, 9vw, 9rem); }
+
+.six7-lineup .collection__description {
+  margin-top: 1.6rem;
+  max-width: 60ch;
+}
+
+.six7-lineup .product-card-wrapper {
+  --border-radius: 0;
+  --border-width: 0;
+  --shadow-opacity: 0;
+  --image-padding: 0;
+  --text-alignment: start;
+}
+
+.six7-lineup .card--media .card__inner {
+  background: rgb(var(--six7-color-silver));
+}
+
+.six7-lineup .card__media .media img {
+  object-fit: contain;
+  padding: clamp(1rem, 2vw, 2.4rem);
+  transition: opacity 300ms ease, transform 500ms cubic-bezier(0.2, 0.65, 0.25, 1);
+}
+
+.six7-lineup .card > .card__content {
+  padding-inline: 0;
+}
+
+.six7-lineup .card > .card__content .card__information {
+  padding: 1.6rem 0 0;
+}
+
+.six7-lineup .card__heading {
+  font: 600 clamp(1.3rem, 1.25vw, 1.6rem)/1.4 var(--six7-font-body);
+  letter-spacing: -0.02em;
+  overflow-wrap: anywhere;
+}
+
+.six7-lineup .card-information > .price {
+  margin-top: 0.8rem;
+}
+
+.six7-lineup .price {
+  font: 600 1.4rem/1.5 var(--six7-font-body);
+  letter-spacing: 0;
+}
+
+.six7-lineup .price .price-item {
+  margin-inline-end: 0.6rem;
+}
+
+.six7-lineup .price--on-sale .price-item--regular {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.six7-lineup .card__badge .badge {
+  border-radius: 0;
+  font: 600 1rem/1.4 var(--six7-font-body);
+  letter-spacing: 0.07em;
+  max-width: 100%;
+  padding: 0.5rem 0.8rem;
+  overflow-wrap: anywhere;
+  text-transform: uppercase;
+}
+
+.six7-lineup .card__heading a:focus-visible::after {
+  box-shadow: none;
+  outline: 2px solid rgb(var(--color-foreground));
+  outline-offset: 3px;
+}
+
+.six7-lineup .collection__view-all {
+  margin-top: clamp(2.8rem, 4vw, 4.8rem);
+  padding-inline: 1.5rem;
+}
+
+.six7-lineup .collection__view-all a {
+  align-items: center;
+  display: inline-flex;
+  font: 600 1.2rem/1.4 var(--six7-font-body);
+  gap: 2.4rem;
+  justify-content: center;
+  letter-spacing: 0.1em;
+  min-height: 4.8rem;
+  text-transform: uppercase;
+}
+
+.six7-lineup .collection__view-all .button {
+  --buttons-radius: 0;
+  --buttons-radius-outset: 0;
+  --buttons-shadow-opacity: 0;
+  min-width: 20rem;
+}
+
+.six7-lineup .collection__view-all .link {
+  text-underline-offset: 0.5rem;
+}
+
+.six7-lineup__arrow {
+  display: inline-flex;
+  flex: 0 0 2rem;
+  width: 2rem;
+  transition: transform 250ms ease;
+}
+
+.six7-lineup__arrow svg {
+  height: auto;
+  width: 100%;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .six7-lineup .card-wrapper:hover .media.media--hover-effect > img {
+    transform: scale(1.04);
+  }
+
+  .six7-lineup .collection__view-all a:hover .six7-lineup__arrow {
+    transform: translateX(0.4rem);
+  }
+}
+
+/* Touch users always see the primary image; avoid sticky hover image swaps. */
+@media (hover: none) {
+  .six7-lineup .card-wrapper:hover .media.media--hover-effect > img:first-child {
+    opacity: 1;
+    transform: none;
+  }
+
+  .six7-lineup .card-wrapper:hover .media.media--hover-effect > img + img {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .six7-lineup .card > .card__content .card__information {
+    padding-top: 1.2rem;
+  }
+
+  .six7-lineup .price {
+    font-size: 1.3rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .six7-lineup .card-wrapper .media.media--hover-effect > img,
+  .six7-lineup .card-wrapper:hover .media.media--hover-effect > img,
+  .six7-lineup__arrow {
+    transition: none;
+    transform: none;
+  }
+}

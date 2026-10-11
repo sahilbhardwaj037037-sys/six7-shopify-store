@@ -4,6 +4,10 @@
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 
+{%- if request.page_type == 'index' -%}
+  {{ 'six7-featured-collection.css' | asset_url | stylesheet_tag }}
+{%- endif -%}
+
 {% if section.settings.image_shape == 'blob' %}
   {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
 {%- endif -%}
@@ -65,7 +69,7 @@
 -%}
 
 <div
-  class="color-{{ section.settings.color_scheme }} isolate gradient"
+  class="color-{{ section.settings.color_scheme }} isolate gradient{% if request.page_type == 'index' %} six7-lineup{% endif %}"
 >
   <div
     class="collection{% if section.settings.quick_add == 'bulk' %} collection-quick-add-bulk{% endif %} section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}"
@@ -73,6 +77,9 @@
     data-id="{{ section.id }}"
   >
     <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
+      {%- if request.page_type == 'index' and section.settings.eyebrow != blank -%}
+        <p class="six7-lineup__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      {%- endif -%}
       {%- if section.settings.title != blank -%}
         <h2 class="title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
           {{ section.settings.title }}
@@ -206,6 +213,9 @@
           aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title | escape }}"
         >
           {{ 'sections.featured_collection.view_all' | t }}
+          {%- if request.page_type == 'index' -%}
+            <span class="six7-lineup__arrow" aria-hidden="true">{{ 'icon-arrow.svg' | inline_asset_content }}</span>
+          {%- endif -%}
         </a>
       </div>
     {%- endif -%}
@@ -242,6 +252,13 @@
       "type": "header",
       "content": "t:sections.featured-collection.settings.header_text.content"
     },   
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "default": "CURATED FOR EVERY MOVE",
+      "label": "Homepage eyebrow",
+      "info": "Shown above the featured collection heading on the homepage."
+    },
     {
       "type": "inline_richtext",
       "id": "title",
