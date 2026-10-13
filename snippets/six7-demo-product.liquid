@@ -1,0 +1,10 @@
+{%- comment -%}Exact approved demo-product allowlist; output only true/false for callers.{%- endcomment -%}
+{%- liquid
+  assign demo_ids = '|7201831714865|7201838039089|7201838071857|7201838104625|7201838137393|7201838170161|7201838268465|7201838759985|7201838792753|7201838858289|7201838923825|7201838989361|7201839087665|7201839153201|7201839185969|7201839775793|'
+  assign demo_key = product.id | prepend: '|' | append: '|'
+  if settings.six7_demo_preview_mode and product != blank and demo_ids contains demo_key
+    echo 'true'
+  else
+    echo 'false'
+  endif
+-%}

@@ -29,6 +29,7 @@
 {%- endstyle -%}
 
 <footer class="six7-footer footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+  {% if settings.six7_demo_preview_mode %}{% render 'six7-demo-information' %}{% endif %}
   {%- if section.settings.brand_signature != blank or section.settings.brand_statement != blank or section.settings.polish_menu != blank -%}
     <div class="six7-footer__rail page-width">
       <div class="six7-footer__identity">
@@ -44,7 +45,7 @@
           <p class="six7-footer__label">{{ section.settings.navigation_label | default: section.settings.polish_menu.title | escape }}</p>
           <ul role="list" class="list-unstyled">
             {%- for link in section.settings.polish_menu.links -%}
-              <li><a href="{{ link.url }}"{% if link.current %} aria-current="page"{% endif %}>{{ link.title | escape }}</a></li>
+              <li><a href="{% render 'six7-navigation-url', menu_link: link %}"{% if link.current %} aria-current="page"{% endif %}>{{ link.title | escape }}</a></li>
             {%- endfor -%}
           </ul>
         </nav>
@@ -115,7 +116,7 @@
                         {%- for link in block.settings.menu.links -%}
                           <li>
                             <a
-                              href="{{ link.url }}"
+                              href="{% render 'six7-navigation-url', menu_link: link %}"
                               class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}"
                             >
                               {{ link.title | escape }}

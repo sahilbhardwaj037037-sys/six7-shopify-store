@@ -1,0 +1,43 @@
+{%- liquid
+  assign demo_group = 'all'
+  if request.page_type == 'collection'
+    assign demo_group = collection.handle
+  endif
+  assign demo_groups = 'all,men,women,kids,sports' | split: ','
+-%}
+{% if settings.six7_demo_preview_mode and demo_groups contains demo_group %}
+  {{ 'six7-demo.css' | asset_url | stylesheet_tag }}
+  <section class="six7-demo page-width" aria-labelledby="Six7DemoHeading-{{ section.id }}">
+    <div class="six7-demo__intro">
+      <p class="six7-demo__eyebrow">Six&amp;7 / Concept collection</p>
+      <h2 id="Six7DemoHeading-{{ section.id }}">{{ section.settings.heading | escape }}</h2>
+      <p class="six7-demo__notice">Portfolio Demo — Not Available for Purchase</p>
+      <p class="six7-demo__copy">{{ section.settings.description | escape }}</p>
+    </div>
+    <nav class="six7-demo__nav" aria-label="Concept collection groups">
+      {% for group in demo_groups %}
+        <a href="{{ routes.collections_url }}/{{ group }}#six7-concepts"{% if group == demo_group and request.page_type == 'collection' %} aria-current="page"{% endif %}>{{ group | capitalize }}</a>
+      {% endfor %}
+    </nav>
+    <div class="six7-demo__grid" id="six7-concepts">
+      {% render 'six7-demo-catalog', demo_group: demo_group, demo_limit: section.settings.product_limit, section_id: section.id %}
+    </div>
+    <p class="six7-demo__footnote">Concept previews use the pictured colorway. Size, fit and other Color options are unverified. Store search and availability filters apply to the available catalog, separately from these previews.</p>
+    {% if request.page_type != 'collection' %}<a class="six7-demo__all" href="{{ routes.all_products_collection_url }}#six7-concepts">Explore all 16 concepts <span aria-hidden="true">↗</span></a>{% endif %}
+  </section>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Six7 concept preview",
+  "tag": "div",
+  "class": "six7-demo-section",
+  "settings": [
+    { "type": "paragraph", "content": "Full catalog: Collections > Default collection, then preview All. Select this Six7 concept preview section in the sidebar. Home page shows six highlights. These are expandable concept cards, not product/page templates or products in the editor selector. Toggle Demo Preview Mode in Theme settings > Six7 portfolio demo." },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "The next collection." },
+    { "type": "textarea", "id": "description", "label": "Introduction", "default": "Explore the pictured concepts. Open a concept for its story and details." },
+    { "type": "range", "id": "product_limit", "label": "Maximum concepts", "min": 1, "max": 16, "step": 1, "default": 16 }
+  ],
+  "presets": [{ "name": "Six7 concept preview" }]
+}
+{% endschema %}

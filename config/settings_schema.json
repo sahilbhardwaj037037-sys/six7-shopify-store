@@ -1466,5 +1466,36 @@
         "label": "t:settings_schema.customer_accounts.settings.customer_account_menu.label"
       }
     ]
+  },
+  {
+    "name": "Six7 portfolio demo",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "six7_demo_preview_mode",
+        "label": "Demo Preview Mode",
+        "default": true,
+        "info": "Show approved catalog concepts without publishing products. Hides unverified options and purchase controls only for the 16 allowlisted products. Concept content is a verified snapshot; refresh it when catalog data changes."
+      },
+      {
+        "type": "text",
+        "id": "six7_demo_home_title",
+        "label": "Demo homepage SEO title",
+        "default": "Six&7 — Footwear Concept Portfolio"
+      },
+      {
+        "type": "textarea",
+        "id": "six7_demo_home_description",
+        "label": "Demo homepage SEO description",
+        "default": "Explore the Six&7 footwear concept portfolio: image-backed designs across Men, Women, Kids and Sports, with non-purchasable concept previews."
+      },
+      {
+        "type": "text",
+        "id": "six7_demo_wordmark",
+        "label": "Demo header wordmark",
+        "default": "Six&7",
+        "info": "Used only when Demo Preview Mode is on and no merchant logo image is set. Does not rename the store."
+      }
+    ]
   }
 ]

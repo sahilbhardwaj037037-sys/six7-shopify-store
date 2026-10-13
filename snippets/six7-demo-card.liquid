@@ -1,0 +1,15 @@
+<article class="six7-demo-card" data-demo-product-id="{{ demo_id | escape }}">
+  <div class="six7-demo-card__media">
+    <img src="{{ image_url | escape }}" alt="{{ image_alt }}" width="1024" height="1024" loading="lazy">
+  </div>
+  <div class="six7-demo-card__body">
+    <p class="six7-demo-card__group">{{ group | escape }} / Concept</p>
+    <h3>{{ title }}</h3>
+    <p class="six7-demo-card__price">{{ price_label | escape }}</p>
+    <details class="six7-demo-card__details">
+      <summary aria-label="View concept: {{ title | strip_html }}">View concept <span aria-hidden="true">+</span></summary>
+      <div class="six7-demo-card__description rte">{{ description }}</div>
+      <p class="six7-demo-card__unavailable">Portfolio Demo — Not Available for Purchase</p>
+    </details>
+  </div>
+</article>

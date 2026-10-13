@@ -21,6 +21,11 @@
 .six7-footer .footer__content-bottom { padding-top: 2rem; }
 .six7-footer .copyright__content { font-size: 1.1rem; letter-spacing: 0; }
 .six7-footer a:focus-visible { outline: 2px solid rgb(var(--color-foreground)); outline-offset: 3px; }
+.six7-footer__demo-info { padding-bottom: 3rem; }
+.six7-footer__demo-info details { border-block: 1px solid rgba(var(--color-foreground), 0.2); }
+.six7-footer__demo-info summary { min-height: 4.4rem; padding-block: 1.2rem; cursor: pointer; font: 600 1.3rem/1.6 var(--six7-font-body); }
+.six7-footer__demo-info summary:focus-visible { outline: 2px solid rgb(var(--color-foreground)); outline-offset: 3px; }
+.six7-footer__demo-info p { max-width: 75ch; font: 400 1.3rem/1.7 var(--six7-font-body); margin-block: 0 1.6rem; }
 @media screen and (max-width: 749px) {
   .six7-footer__rail { grid-template-columns: minmax(0, 1fr); gap: 3rem; }
   .six7-footer .footer__content-top { padding-inline: 1.5rem; }

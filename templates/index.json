@@ -158,12 +158,21 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
+    },
+    "six7_demo_catalog": {
+      "type": "six7-demo-catalog",
+      "settings": {
+        "heading": "The next collection.",
+        "description": "Explore the pictured concepts. Open a concept for its story and details.",
+        "product_limit": 6
+      }
     }
   },
   "order": [
     "six7_hero",
     "six7_categories",
     "image_banner",
+    "six7_demo_catalog",
     "featured_collection"
   ]
 }

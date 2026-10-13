@@ -1,3 +1,6 @@
+{%- capture six7_demo_flag -%}{%- render 'six7-demo-product', product: product -%}{%- endcapture -%}
+{%- assign six7_demo_flag = six7_demo_flag | strip -%}
+{% if six7_demo_flag == 'true' %}{{ 'six7-demo.css' | asset_url | stylesheet_tag }}{% endif %}
 <product-info
   id="MainProduct-{{ section.id }}"
   class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}{% if section.settings.enable_six7_design %} six7-product{% endif %}"
@@ -92,7 +95,11 @@
           >
             {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
+            {% if six7_demo_flag == 'true' %}{% render 'six7-demo-notice' %}{% endif %}
             {%- for block in section.blocks -%}
+              {% if six7_demo_flag == 'true' %}
+                {% if block.type == 'variant_picker' or block.type == 'quantity_selector' or block.type == 'buy_buttons' %}{% continue %}{% endif %}
+              {% endif %}
               {%- case block.type -%}
                 {%- when '@app' -%}
                   {% render block %}
@@ -140,13 +147,7 @@
                       {%- endif -%}
                     </div>
                   {%- endif -%}
-                  <div {{ block.shopify_attributes }}>
-                    {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
-                    {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
-                      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-                      {{ form | payment_terms }}
-                    {%- endform -%}
-                  </div>
+                  {% render 'six7-product-payment-terms', product: product, block: block, section_id: section.id, demo_flag: six7_demo_flag %}
                 {%- when 'inventory' -%}
                   <p
                     class="product__inventory{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"

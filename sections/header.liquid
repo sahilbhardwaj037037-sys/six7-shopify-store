@@ -1,3 +1,9 @@
+{%- liquid
+  assign six7_header_wordmark = shop.name
+  if settings.six7_demo_preview_mode and settings.six7_demo_wordmark != blank
+    assign six7_header_wordmark = settings.six7_demo_wordmark
+  endif
+-%}
 <link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -203,7 +209,7 @@
               }}
             </div>
           {%- else -%}
-            <span class="h2">{{ shop.name }}</span>
+            <span class="h2">{{ six7_header_wordmark | escape }}</span>
           {%- endif -%}
         </a>
       </div>
@@ -242,7 +248,7 @@
               }}
             </div>
           {%- else -%}
-            <span class="h2">{{ shop.name }}</span>
+            <span class="h2">{{ six7_header_wordmark | escape }}</span>
           {%- endif -%}
         </a>
       </div>

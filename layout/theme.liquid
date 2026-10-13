@@ -15,18 +15,46 @@
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
 
+    {%- liquid
+      assign six7_seo_title = page_title
+      assign six7_seo_description = page_description
+      if settings.six7_demo_preview_mode
+        if request.page_type == 'index'
+          assign six7_seo_title = settings.six7_demo_home_title | default: page_title
+          if six7_seo_description == blank
+            assign six7_seo_description = settings.six7_demo_home_description
+          endif
+        elsif request.page_type == 'collection' and six7_seo_description == blank
+          capture six7_seo_description
+            echo collection.title
+            echo ' footwear concepts in the Six&7 portfolio demo. Explore pictured designs; concept previews are not available for purchase.'
+          endcapture
+        elsif request.page_type == 'page' and six7_seo_description == blank
+          assign six7_seo_description = page.content | strip_html | strip | truncate: 160
+          if six7_seo_description == blank
+            if page.handle == 'about-us'
+              assign six7_seo_description = 'About Six&7: a demo footwear brand with a clean sneaker aesthetic and a focus on everyday style.'
+            elsif page.handle == 'contact'
+              assign six7_seo_description = 'Contact Six&7 about the footwear concept portfolio and storefront demonstration.'
+            endif
+          endif
+        endif
+      endif
+    -%}
     <title>
-      {{ page_title }}
+      {{ six7_seo_title | escape }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
       {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+      {%- unless settings.six7_demo_preview_mode and request.page_type == 'index' -%}
+        {%- unless page_title contains shop.name %} &ndash; {{ shop.name | escape }}{% endunless -%}
+      {%- endunless -%}
     </title>
 
-    {% if page_description %}
-      <meta name="description" content="{{ page_description | escape }}">
+    {% if six7_seo_description != blank %}
+      <meta name="description" content="{{ six7_seo_description | escape }}">
     {% endif %}
 
-    {% render 'meta-tags' %}
+    {% render 'meta-tags', six7_seo_title: six7_seo_title, six7_seo_description: six7_seo_description %}
 
     <script type="module">
       import * as StandardEvents from 'https://cdn.shopify.com/storefront/standard-events.js';

@@ -1,0 +1,14 @@
+{%- comment -%}Draft-theme demo information; no store-wide policy content is created or changed.{%- endcomment -%}
+<div class="six7-footer__demo-info page-width">
+  <details>
+    <summary>Portfolio demo information</summary>
+    <p>The 16 concept previews are not available for purchase. Their pictured colorways and displayed prices illustrate the portfolio; additional Color options, sizing and fit remain unverified.</p>
+    {% if shop.shipping_policy == blank or shop.refund_policy == blank or shop.terms_of_service == blank %}
+      <p>Not configured for this demonstration:
+        {% if shop.shipping_policy == blank %}shipping policy{% endif %}{% if shop.refund_policy == blank %}{% if shop.shipping_policy == blank %}, {% endif %}refund policy{% endif %}{% if shop.terms_of_service == blank %}{% if shop.shipping_policy == blank or shop.refund_policy == blank %}, {% endif %}terms of service{% endif %}.
+        This information is a portfolio note, not a legal policy or a delivery or refund commitment.
+      </p>
+    {% endif %}
+    <p>The existing active products use the standard store cart. Payment, shipping, tax and fulfillment readiness have not been verified for a real launch.</p>
+  </details>
+</div>
