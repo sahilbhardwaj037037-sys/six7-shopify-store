@@ -20,7 +20,7 @@
         "primary_label": "Shop Collection",
         "primary_url": "shopify://collections/all",
         "secondary_label": "Explore Our Story",
-        "secondary_url": "",
+        "secondary_url": "/pages/about-us?view=about",
         "background_color": "#ffffff",
         "text_color": "#111111",
         "accent_color": "#e63946",
