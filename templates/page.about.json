@@ -1,15 +1,58 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "six7-about",
       "blocks": {
-        "perspective": {"type": "principle", "settings": {"heading": "A CLEAN POINT OF VIEW.", "text": "<p>Simple lines, a considered palette and space for personal expression. That is the Six&7 aesthetic.</p>"}},
-        "movement": {"type": "principle", "settings": {"heading": "ROOM TO MOVE.", "text": "<p>Men, women, kids and sports: four perspectives on footwear, connected by everyday movement.</p>"}},
-        "individuality": {"type": "principle", "settings": {"heading": "MAKE IT YOURS.", "text": "<p>A sneaker is part of a wider story. How you wear it, where you take it and what you pair it with are yours to decide.</p>"}}
+        "perspective": {
+          "type": "principle",
+          "settings": {
+            "heading": "A CLEAN POINT OF VIEW.",
+            "text": "<p>Simple lines, a considered palette and space for personal expression. That is the Six&7 aesthetic.</p>"
+          }
+        },
+        "movement": {
+          "type": "principle",
+          "settings": {
+            "heading": "ROOM TO MOVE.",
+            "text": "<p>Men, women, kids and sports: four perspectives on footwear, connected by everyday movement.</p>"
+          }
+        },
+        "individuality": {
+          "type": "principle",
+          "settings": {
+            "heading": "MAKE IT YOURS.",
+            "text": "<p>A sneaker is part of a wider story. How you wear it, where you take it and what you pair it with are yours to decide.</p>"
+          }
+        }
       },
-      "block_order": ["perspective", "movement", "individuality"],
-      "settings": {}
+      "block_order": [
+        "perspective",
+        "movement",
+        "individuality"
+      ],
+      "settings": {
+        "eyebrow": "THE SIX&7 POINT OF VIEW",
+        "heading": "EVERYDAY,\nIN MOTION.",
+        "intro": "<p>Six&7 is a demo footwear brand built around a simple idea: everyday style, always in motion.</p><p>Our point of view brings a clean sneaker aesthetic to the different ways we move — from daily routines to time spent outdoors.</p>",
+        "image": "shopify://shop_images/soccer-cleats-and-ball.jpg",
+        "poster_note": "SIX&7 / FOOTWEAR & EVERYDAY CULTURE",
+        "poster_line": "YOUR PACE. YOUR POINT OF VIEW.",
+        "cta_label": "Explore the collection",
+        "cta_url": "",
+        "color_scheme": ""
+      }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main"
+  ]
 }

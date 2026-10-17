@@ -49,12 +49,6 @@
           "type": "description",
           "settings": {}
         },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        },
         "six7_shipping": {
           "type": "six7_policy",
           "settings": {
@@ -69,6 +63,12 @@
             "heading": "Returns & Exchanges",
             "policy": "returns",
             "content": ""
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
           }
         }
       },
@@ -85,6 +85,7 @@
         "share"
       ],
       "settings": {
+        "enable_six7_design": true,
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
         "media_size": "medium",
@@ -97,13 +98,16 @@
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 48,
-        "padding_bottom": 40,
-        "enable_six7_design": true
+        "padding_bottom": 40
       }
     },
     "disclosures": {
       "type": "disclosures",
       "settings": {
+        "heading": "Disclosures",
+        "heading_size": "h2",
+        "open_by_default": false,
+        "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 0
       }
@@ -125,11 +129,32 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "1791640774c65bff9f": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_bQ6hq7": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "real_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_bQ6hq7"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "main",
     "disclosures",
-    "related-products"
+    "related-products",
+    "1791640774c65bff9f"
   ]
 }

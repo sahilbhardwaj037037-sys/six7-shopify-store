@@ -349,9 +349,11 @@
     </script>
     {{ 'six7-tokens.css' | asset_url | stylesheet_tag }}
     {{ 'six7-header.css' | asset_url | stylesheet_tag }}
+    {{ 'six7-cream-motion.css' | asset_url | stylesheet_tag }}
+    <script src="{{ 'six7-cream-motion.js' | asset_url }}" defer="defer"></script>
   </head>
 
-  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+  <body class="six7-cream-lab gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>

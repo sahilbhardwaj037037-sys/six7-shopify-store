@@ -43,7 +43,8 @@
         "heading": "Concepts in focus.",
         "description": "Explore the pictured concepts. Open a concept for its story and details.",
         "product_limit": 16
-      }
+      },
+      "disabled": true
     }
   },
   "order": [
