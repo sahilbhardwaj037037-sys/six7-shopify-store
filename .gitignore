@@ -29,3 +29,19 @@ Desktop.ini
 *.orig
 
 # Theme source, including config/settings_data.json, stays tracked.
+
+# Private local audits, backups and generated handover validation
+/backups/
+/reports/
+/portfolio-delivery/delivery-validation.json
+
+# Credentials, browser authentication and captured network sessions
+*.pem
+*.key
+*.p12
+*.pfx
+*.har
+*.trace.zip
+storage-state*.json
+storageState*.json
+/playwright/.auth/

@@ -1,0 +1,718 @@
+{
+  "themeId": 130298347569,
+  "commit": "a111dc1b82adcbf931fe40895b408ac6ea686cc5",
+  "capturedAt": "2026-10-13T12:31:29.054Z",
+  "screenshots": [
+    {
+      "file": "screenshots/desktop/homepage.png",
+      "page": "homepage",
+      "device": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "scope": "viewport",
+      "route": "/",
+      "theme": {
+        "id": 130298347569,
+        "name": "Six&7 Draft",
+        "role": "unpublished"
+      },
+      "nativeProduct": null,
+      "previewToolbarSuppressedForCaptureOnly": true,
+      "capturedAt": "2026-10-13T12:38:39.907Z",
+      "imagePixels": {
+        "width": 1440,
+        "height": 1000
+      },
+      "bytes": 398648,
+      "sha256": "6de1f478fdc61366f5219e1c53d880358f459791593adf2ddfed579298a56b2b",
+      "caption": "Custom Six&7 hero and homepage presentation. Full-page image includes homepage concept highlights and featured products.",
+      "format": "PNG (lossless)"
+    },
+    {
+      "file": "screenshots/desktop/product.png",
+      "page": "product",
+      "device": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "scope": "viewport",
+      "route": "/products/six-7-velocity-runner",
+      "theme": {
+        "id": 130298347569,
+        "name": "Six&7 Draft",
+        "role": "unpublished"
+      },
+      "nativeProduct": "Existing Active SIX&7 Velocity Runner",
+      "previewToolbarSuppressedForCaptureOnly": true,
+      "capturedAt": "2026-10-13T12:38:40.944Z",
+      "imagePixels": {
+        "width": 1440,
+        "height": 1000
+      },
+      "bytes": 221646,
+      "sha256": "b8fddb9c147e12ae42b240b879bddbc7d9f03f5310f44195eeb7344e37e60e19",
+      "caption": "Existing Active SIX&7 Velocity Runner with native gallery, options and purchase controls. Not a Draft product-page preview.",
+      "format": "PNG (lossless)"
+    },
+    {
+      "file": "screenshots/desktop/collection.png",
+      "page": "collection",
+      "device": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "scope": "viewport",
+      "route": "/collections/men",
+      "theme": {
+        "id": 130298347569,
+        "name": "Six&7 Draft",
+        "role": "unpublished"
+      },
+      "nativeProduct": null,
+      "previewToolbarSuppressedForCaptureOnly": true,
+      "capturedAt": "2026-10-13T12:38:41.992Z",
+      "imagePixels": {
+        "width": 1440,
+        "height": 1000
+      },
+      "bytes": 234027,
+      "sha256": "eb56e69d5ab6923373174dc5e1bc340681f75f001582064771c772bb41612910",
+      "caption": "Men collection: seven non-purchasable concepts, with the native catalog area below.",
+      "format": "PNG (lossless)"
+    },
+    {
+      "file": "screenshots/desktop/catalog.png",
+      "page": "catalog",
+      "device": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "scope": "viewport",
+      "route": "/collections/all#six7-concepts",
+      "theme": {
+        "id": 130298347569,
+        "name": "Six&7 Draft",
+        "role": "unpublished"
+      },
+      "nativeProduct": null,
+      "previewToolbarSuppressedForCaptureOnly": true,
+      "capturedAt": "2026-10-13T12:38:43.126Z",
+      "imagePixels": {
+        "width": 1440,
+        "height": 1000
+      },
+      "bytes": 296536,
+      "sha256": "d8eeca9c21c59adc2a2f92889ce5d1559f279b1b3aec9acfa7c695a6967694b6",
+      "caption": "All collection: sixteen non-purchasable concepts; native Active-product catalog below.",
+      "format": "PNG (lossless)"
+    },
+    {
+      "file": "screenshots/desktop/catalog-all-16.png",
+      "page": "catalog",
+      "device": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "scope": "full page",
+      "route": "/collections/all#six7-concepts",
+      "conceptCount": 16,
+      "theme": {
+        "id": 130298347569,
+        "name": "Six&7 Draft",
+        "role": "unpublished"
+      },
+      "previewToolbarSuppressedForCaptureOnly": true,
+      "capturedAt": "2026-10-13T12:38:44.141Z",
+      "imagePixels": {
+        "width": 1440,
+        "height": 5512
+      },
+      "bytes": 1655418,
+      "sha256": "f010c9c2c4d20c580fcf9821566d7738b4e8cd7f9d6076b4b305aea3d0740c3c",
+      "caption": "All collection: sixteen non-purchasable concepts; native Active-product catalog below.",
+      "format": "PNG (lossless)"
+    },
+    {
+      "file": "screenshots/desktop/about.png",
+      "page": "about",
+      "device": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "scope": "viewport",
+      "route": "/pages/about-us?view=about",
+      "theme": {
+        "id": 130298347569,
+        "name": "Six&7 Draft",
+        "role": "unpublished"
+      },
+      "nativeProduct": null,
+      "previewToolbarSuppressedForCaptureOnly": true,
+      "capturedAt": "2026-10-13T12:38:45.123Z",
+      "imagePixels": {
+        "width": 1440,
+        "height": 1000
+      },
+      "bytes": 678797,
+      "sha256": "07c9d5e1c828a6edc4b350ec6d76c6c1385d6c2ca3a9140f0f0ea434c321dada",
+      "caption": "Premium About template using the existing ?view=about route and merchant-configured imagery.",
+      "format": "PNG (lossless)"
+    },
+    {
+      "file": "screenshots/desktop/contact.png",
+      "page": "contact",
+      "device": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "scope": "viewport",
+      "route": "/pages/contact",
+      "theme": {
+        "id": 130298347569,
+        "name": "Six&7 Draft",
+        "role": "unpublished"
+      },
+      "nativeProduct": null,
+      "previewToolbarSuppressedForCaptureOnly": true,
+      "capturedAt": "2026-10-13T12:38:46.031Z",
+      "imagePixels": {
+        "width": 1440,
+        "height": 1000
+      },
+      "bytes": 64561,
+      "sha256": "e8660ccb284bbe9033b492fda3a4f3f05b6c8396e03cbbdf22fee105b293d3ea",
+      "caption": "Contact page and existing form presentation; no message was submitted.",
+      "format": "PNG (lossless)"
+    },
+    {
+      "file": "screenshots/mobile/homepage.png",
+      "page": "homepage",
+      "device": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scope": "viewport",
+      "route": "/",
+      "theme": {
+        "id": 130298347569,
+        "name": "Six&7 Draft",
+        "role": "unpublished"
+      },
+      "nativeProduct": null,
+      "previewToolbarSuppressedForCaptureOnly": true,
+      "capturedAt": "2026-10-13T12:38:47.241Z",
+      "imagePixels": {
+        "width": 390,
+        "height": 844
+      },
+      "bytes": 135565,
+      "sha256": "b27feb484d4fde5bf4638511922c70e5fa7a5e03faf9ccea2b11257970ed78fb",
+      "caption": "Custom Six&7 hero and homepage presentation. Full-page image includes homepage concept highlights and featured products.",
+      "format": "PNG (lossless)"
+    },
+    {
+      "file": "screenshots/mobile/product.png",
+      "page": "product",
+      "device": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scope": "viewport",
+      "route": "/products/six-7-velocity-runner",
+      "theme": {
+        "id": 130298347569,
+        "name": "Six&7 Draft",
+        "role": "unpublished"
+      },
+      "nativeProduct": "Existing Active SIX&7 Velocity Runner",
+      "previewToolbarSuppressedForCaptureOnly": true,
+      "capturedAt": "2026-10-13T12:38:48.193Z",
+      "imagePixels": {
+        "width": 390,
+        "height": 844
+      },
+      "bytes": 95877,
+      "sha256": "3690feaa0228dace81652dee04ae21023987f0fea5ec5ca382cc67a4777c177e",
+      "caption": "Existing Active SIX&7 Velocity Runner with native gallery, options and purchase controls. Not a Draft product-page preview.",
+      "format": "PNG (lossless)"
+    },
+    {
+      "file": "screenshots/mobile/collection.png",
+      "page": "collection",
+      "device": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scope": "viewport",
+      "route": "/collections/men",
+      "theme": {
+        "id": 130298347569,
+        "name": "Six&7 Draft",
+        "role": "unpublished"
+      },
+      "nativeProduct": null,
+      "previewToolbarSuppressedForCaptureOnly": true,
+      "capturedAt": "2026-10-13T12:38:49.352Z",
+      "imagePixels": {
+        "width": 390,
+        "height": 844
+      },
+      "bytes": 108436,
+      "sha256": "b33e04d932fb44208afc813b9545b051f215ee3ff341409cd88ac0b80b76a68d",
+      "caption": "Men collection: seven non-purchasable concepts, with the native catalog area below.",
+      "format": "PNG (lossless)"
+    },
+    {
+      "file": "screenshots/mobile/catalog.png",
+      "page": "catalog",
+      "device": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scope": "viewport",
+      "route": "/collections/all#six7-concepts",
+      "theme": {
+        "id": 130298347569,
+        "name": "Six&7 Draft",
+        "role": "unpublished"
+      },
+      "nativeProduct": null,
+      "previewToolbarSuppressedForCaptureOnly": true,
+      "capturedAt": "2026-10-13T12:38:50.823Z",
+      "imagePixels": {
+        "width": 390,
+        "height": 844
+      },
+      "bytes": 129460,
+      "sha256": "94434dc5fc371a0b809175a00a2f17e7c0e859728694def6715eb84a936326ce",
+      "caption": "All collection: sixteen non-purchasable concepts; native Active-product catalog below.",
+      "format": "PNG (lossless)"
+    },
+    {
+      "file": "screenshots/mobile/catalog-all-16.png",
+      "page": "catalog",
+      "device": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scope": "full page",
+      "route": "/collections/all#six7-concepts",
+      "conceptCount": 16,
+      "theme": {
+        "id": 130298347569,
+        "name": "Six&7 Draft",
+        "role": "unpublished"
+      },
+      "previewToolbarSuppressedForCaptureOnly": true,
+      "capturedAt": "2026-10-13T12:38:52.107Z",
+      "imagePixels": {
+        "width": 390,
+        "height": 11190
+      },
+      "bytes": 1627914,
+      "sha256": "c5d232269e674f4c4d0c8a7ffb9a77a6075a1d848e930c98a17570decd123f84",
+      "caption": "All collection: sixteen non-purchasable concepts; native Active-product catalog below.",
+      "format": "PNG (lossless)"
+    },
+    {
+      "file": "screenshots/mobile/about.png",
+      "page": "about",
+      "device": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scope": "viewport",
+      "route": "/pages/about-us?view=about",
+      "theme": {
+        "id": 130298347569,
+        "name": "Six&7 Draft",
+        "role": "unpublished"
+      },
+      "nativeProduct": null,
+      "previewToolbarSuppressedForCaptureOnly": true,
+      "capturedAt": "2026-10-13T12:38:53.066Z",
+      "imagePixels": {
+        "width": 390,
+        "height": 844
+      },
+      "bytes": 245720,
+      "sha256": "a66cab17f1c67a37434be95b0ca2acc8a7f2c2c595fc50a4937ee83d8cb8c6b7",
+      "caption": "Premium About template using the existing ?view=about route and merchant-configured imagery.",
+      "format": "PNG (lossless)"
+    },
+    {
+      "file": "screenshots/mobile/contact.png",
+      "page": "contact",
+      "device": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scope": "viewport",
+      "route": "/pages/contact",
+      "theme": {
+        "id": 130298347569,
+        "name": "Six&7 Draft",
+        "role": "unpublished"
+      },
+      "nativeProduct": null,
+      "previewToolbarSuppressedForCaptureOnly": true,
+      "capturedAt": "2026-10-13T12:38:54.070Z",
+      "imagePixels": {
+        "width": 390,
+        "height": 844
+      },
+      "bytes": 33231,
+      "sha256": "055a2a6c35acb5f3b86c7fad72100a32e0b7741e28c00e8eb53ae54e379d28e2",
+      "caption": "Contact page and existing form presentation; no message was submitted.",
+      "format": "PNG (lossless)"
+    },
+    {
+      "file": "screenshots/desktop/homepage-full.png",
+      "page": "homepage",
+      "device": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "scope": "full page",
+      "route": "/",
+      "theme": {
+        "id": 130298347569,
+        "name": "Six&7 Draft",
+        "role": "unpublished"
+      },
+      "nativeProduct": null,
+      "previewToolbarSuppressedForCaptureOnly": true,
+      "capturedAt": "2026-10-13T12:38:55.644Z",
+      "imagePixels": {
+        "width": 1440,
+        "height": 5711
+      },
+      "bytes": 2901758,
+      "sha256": "4a10885698c4f7488f73ca9a28c127e4ce4186c553c7756a17ae44c3a485c876",
+      "caption": "Custom Six&7 hero and homepage presentation. Full-page image includes homepage concept highlights and featured products.",
+      "format": "PNG (lossless)"
+    },
+    {
+      "file": "screenshots/desktop/product-full.png",
+      "page": "product",
+      "device": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "scope": "full page",
+      "route": "/products/six-7-velocity-runner",
+      "theme": {
+        "id": 130298347569,
+        "name": "Six&7 Draft",
+        "role": "unpublished"
+      },
+      "nativeProduct": "Existing Active SIX&7 Velocity Runner",
+      "previewToolbarSuppressedForCaptureOnly": true,
+      "capturedAt": "2026-10-13T12:38:56.675Z",
+      "imagePixels": {
+        "width": 1440,
+        "height": 2412
+      },
+      "bytes": 337654,
+      "sha256": "6c3b330ec02c84a03944e256bc864dd2ad85d4f29fb27bf3f9fc9df4658b618d",
+      "caption": "Existing Active SIX&7 Velocity Runner with native gallery, options and purchase controls. Not a Draft product-page preview.",
+      "format": "PNG (lossless)"
+    },
+    {
+      "file": "screenshots/desktop/collection-full.png",
+      "page": "collection",
+      "device": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "scope": "full page",
+      "route": "/collections/men",
+      "theme": {
+        "id": 130298347569,
+        "name": "Six&7 Draft",
+        "role": "unpublished"
+      },
+      "nativeProduct": null,
+      "previewToolbarSuppressedForCaptureOnly": true,
+      "capturedAt": "2026-10-13T12:38:57.831Z",
+      "imagePixels": {
+        "width": 1440,
+        "height": 3729
+      },
+      "bytes": 805229,
+      "sha256": "bffe320b3ec4e1f8d191efa82d4a5b6a255f1914ad6e918babefd55578eca22d",
+      "caption": "Men collection: seven non-purchasable concepts, with the native catalog area below.",
+      "format": "PNG (lossless)"
+    },
+    {
+      "file": "screenshots/desktop/about-full.png",
+      "page": "about",
+      "device": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "scope": "full page",
+      "route": "/pages/about-us?view=about",
+      "theme": {
+        "id": 130298347569,
+        "name": "Six&7 Draft",
+        "role": "unpublished"
+      },
+      "nativeProduct": null,
+      "previewToolbarSuppressedForCaptureOnly": true,
+      "capturedAt": "2026-10-13T12:38:58.835Z",
+      "imagePixels": {
+        "width": 1440,
+        "height": 1736
+      },
+      "bytes": 731806,
+      "sha256": "c271402891db8e28c7bc2dca5b549ea10bd9ba4c5484edbafc421f67d2ef376d",
+      "caption": "Premium About template using the existing ?view=about route and merchant-configured imagery.",
+      "format": "PNG (lossless)"
+    },
+    {
+      "file": "screenshots/desktop/contact-full.png",
+      "page": "contact",
+      "device": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "scope": "full page",
+      "route": "/pages/contact",
+      "theme": {
+        "id": 130298347569,
+        "name": "Six&7 Draft",
+        "role": "unpublished"
+      },
+      "nativeProduct": null,
+      "previewToolbarSuppressedForCaptureOnly": true,
+      "capturedAt": "2026-10-13T12:38:59.742Z",
+      "imagePixels": {
+        "width": 1440,
+        "height": 1358
+      },
+      "bytes": 79685,
+      "sha256": "e79f40366c632f89f6887840cd43b99fa542ccc3b36f6794071262ba0f7669c7",
+      "caption": "Contact page and existing form presentation; no message was submitted.",
+      "format": "PNG (lossless)"
+    },
+    {
+      "file": "screenshots/mobile/homepage-full.png",
+      "page": "homepage",
+      "device": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scope": "full page",
+      "route": "/",
+      "theme": {
+        "id": 130298347569,
+        "name": "Six&7 Draft",
+        "role": "unpublished"
+      },
+      "nativeProduct": null,
+      "previewToolbarSuppressedForCaptureOnly": true,
+      "capturedAt": "2026-10-13T12:39:01.246Z",
+      "imagePixels": {
+        "width": 390,
+        "height": 7790
+      },
+      "bytes": 1610747,
+      "sha256": "1a9152c809ac27081e4beb313ab4268a492fff5986f30a64e7fc1cc95775f324",
+      "caption": "Custom Six&7 hero and homepage presentation. Full-page image includes homepage concept highlights and featured products.",
+      "format": "PNG (lossless)"
+    },
+    {
+      "file": "screenshots/mobile/product-full.png",
+      "page": "product",
+      "device": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scope": "full page",
+      "route": "/products/six-7-velocity-runner",
+      "theme": {
+        "id": 130298347569,
+        "name": "Six&7 Draft",
+        "role": "unpublished"
+      },
+      "nativeProduct": "Existing Active SIX&7 Velocity Runner",
+      "previewToolbarSuppressedForCaptureOnly": true,
+      "capturedAt": "2026-10-13T12:39:02.352Z",
+      "imagePixels": {
+        "width": 390,
+        "height": 2991
+      },
+      "bytes": 194031,
+      "sha256": "e255f9e99762cbdf955486d2dc10724108bd5b632f0823d815a301273024f0aa",
+      "caption": "Existing Active SIX&7 Velocity Runner with native gallery, options and purchase controls. Not a Draft product-page preview.",
+      "format": "PNG (lossless)"
+    },
+    {
+      "file": "screenshots/mobile/collection-full.png",
+      "page": "collection",
+      "device": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scope": "full page",
+      "route": "/collections/men",
+      "theme": {
+        "id": 130298347569,
+        "name": "Six&7 Draft",
+        "role": "unpublished"
+      },
+      "nativeProduct": null,
+      "previewToolbarSuppressedForCaptureOnly": true,
+      "capturedAt": "2026-10-13T12:39:03.628Z",
+      "imagePixels": {
+        "width": 390,
+        "height": 5937
+      },
+      "bytes": 752209,
+      "sha256": "736456a9f0f3190945264579e6d0754c2cab2fb3a89e7b12b41898ca5c56a14d",
+      "caption": "Men collection: seven non-purchasable concepts, with the native catalog area below.",
+      "format": "PNG (lossless)"
+    },
+    {
+      "file": "screenshots/mobile/about-full.png",
+      "page": "about",
+      "device": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scope": "full page",
+      "route": "/pages/about-us?view=about",
+      "theme": {
+        "id": 130298347569,
+        "name": "Six&7 Draft",
+        "role": "unpublished"
+      },
+      "nativeProduct": null,
+      "previewToolbarSuppressedForCaptureOnly": true,
+      "capturedAt": "2026-10-13T12:39:04.607Z",
+      "imagePixels": {
+        "width": 390,
+        "height": 2194
+      },
+      "bytes": 360594,
+      "sha256": "f3e961cda111a258aaed9d41f6af749e32eb4be9874e19b04dee60d1f455c1fa",
+      "caption": "Premium About template using the existing ?view=about route and merchant-configured imagery.",
+      "format": "PNG (lossless)"
+    },
+    {
+      "file": "screenshots/mobile/contact-full.png",
+      "page": "contact",
+      "device": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scope": "full page",
+      "route": "/pages/contact",
+      "theme": {
+        "id": 130298347569,
+        "name": "Six&7 Draft",
+        "role": "unpublished"
+      },
+      "nativeProduct": null,
+      "previewToolbarSuppressedForCaptureOnly": true,
+      "capturedAt": "2026-10-13T12:39:05.539Z",
+      "imagePixels": {
+        "width": 390,
+        "height": 1672
+      },
+      "bytes": 55318,
+      "sha256": "93b780277ff53034f9b380d63aa37d456ee9b7128ff1746d383f3e17627df122",
+      "caption": "Contact page and existing form presentation; no message was submitted.",
+      "format": "PNG (lossless)"
+    },
+    {
+      "file": "screenshots/desktop/concept-detail-axis.png",
+      "page": "Axis 01 expanded concept",
+      "device": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "scope": "element: concept card",
+      "route": "/collections/all",
+      "productId": 7201831714865,
+      "theme": {
+        "id": 130298347569,
+        "name": "Six&7 Draft",
+        "role": "unpublished"
+      },
+      "previewToolbarSuppressedForCaptureOnly": true,
+      "capturedAt": "2026-10-13T12:39:09.083Z",
+      "imagePixels": {
+        "width": 351,
+        "height": 948
+      },
+      "bytes": 142894,
+      "sha256": "cdaf432121a745d21fb313a1a2c13fd7ce6414583461427642abef63dea73c4a",
+      "caption": "Expanded Axis 01 concept card showing verified image, price, description and non-purchasable notice. Not a native product page.",
+      "format": "PNG (lossless)"
+    },
+    {
+      "file": "screenshots/mobile/concept-detail-axis.png",
+      "page": "Axis 01 expanded concept",
+      "device": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scope": "element: concept card",
+      "route": "/collections/all",
+      "productId": 7201831714865,
+      "theme": {
+        "id": 130298347569,
+        "name": "Six&7 Draft",
+        "role": "unpublished"
+      },
+      "previewToolbarSuppressedForCaptureOnly": true,
+      "capturedAt": "2026-10-13T12:39:10.053Z",
+      "imagePixels": {
+        "width": 360,
+        "height": 926
+      },
+      "bytes": 147175,
+      "sha256": "9cbe6c86363936b94bf05e9039a07574e07914de25400c3392900378a5a4996f",
+      "caption": "Expanded Axis 01 concept card showing verified image, price, description and non-purchasable notice. Not a native product page.",
+      "format": "PNG (lossless)"
+    }
+  ],
+  "failures": [],
+  "notes": [
+    "Read-only browser navigation. No auth cookies, password, preview keys or storage state captured. PNG capture; prefers-reduced-motion used for stable presentation.",
+    "Native Active product used for product-page screenshots; no native Draft product-page claim.",
+    "Preview toolbar visibility is suppressed only during image capture; no theme file or merchant setting is changed. Full-page captures start at the document top."
+  ],
+  "completedAt": "2026-10-13T12:39:10.053Z",
+  "captureStatus": "complete: all six requested pages in desktop and mobile viewport/full-page views, plus two expanded concept images",
+  "missingRequestedScreenshots": []
+}
