@@ -2,7 +2,7 @@
 
 ## Delivered and verified
 
-- [x] Theme source finalized in local commit `a111dc1b82adcbf931fe40895b408ac6ea686cc5`.
+- [x] Theme source finalized; sanitized equivalent commit `74ea65f15a228da180094b06d77e91b09d3c3245`.
 - [x] Draft theme `130298347569` verified; Live Horizon `130281734193` preserved.
 - [x] Sixteen working concept cards and expanded details; no concept purchase controls.
 - [x] Existing Active-product search, galleries, variants, cart and checkout entry tested.
@@ -20,7 +20,8 @@
 - [ ] Review global controls under **Theme settings → Six7 portfolio demo** and homepage highlights.
 - [ ] Review About, Contact, footer information, existing privacy content and supplied screenshots.
 - [x] Owner authorized one local documentation/assets commit after security validation.
-- [ ] Separately approve GitHub repository creation or push; review [publication checks](PUBLICATION-CHECKLIST.md) first.
+- [x] Git identity rewrite and owner-approved private GitHub publication completed; only sanitized `main` pushed.
+- [ ] Obtain separate approval before changing repository visibility to Public; review [publication checks](PUBLICATION-CHECKLIST.md) first.
 
 ## Preserve during maintenance
 

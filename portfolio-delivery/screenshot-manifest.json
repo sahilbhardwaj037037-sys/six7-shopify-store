@@ -1,6 +1,6 @@
 {
   "themeId": 130298347569,
-  "commit": "a111dc1b82adcbf931fe40895b408ac6ea686cc5",
+  "commit": "74ea65f15a228da180094b06d77e91b09d3c3245",
   "capturedAt": "2026-10-13T12:31:29.054Z",
   "screenshots": [
     {
@@ -714,5 +714,10 @@
   ],
   "completedAt": "2026-10-13T12:39:10.053Z",
   "captureStatus": "complete: all six requested pages in desktop and mobile viewport/full-page views, plus two expanded concept images",
-  "missingRequestedScreenshots": []
+  "missingRequestedScreenshots": [],
+  "sourceCommitProvenance": {
+    "originalCaptureCommit": "a111dc1b82adcbf931fe40895b408ac6ea686cc5",
+    "sanitizedEquivalent": "74ea65f15a228da180094b06d77e91b09d3c3245",
+    "explanation": "Email-only history rewrite; original and sanitized source trees are identical. Capture timestamps, screenshot records and checksums are unchanged."
+  }
 }

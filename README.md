@@ -2,7 +2,7 @@
 
 A custom Shopify Online Store 2.0 footwear portfolio built on Dawn. The project demonstrates responsive theme development, an accessible concept catalog and native commerce interactions while keeping the theme and concept products unpublished.
 
-**Verified source commit:** `a111dc1b82adcbf931fe40895b408ac6ea686cc5`
+**Verified source commit (sanitized history):** `74ea65f15a228da180094b06d77e91b09d3c3245`
 
 **Store:** `sixseven-practice.myshopify.com`
 
@@ -86,5 +86,7 @@ Run `shopify theme check --path <theme-only-directory>` and `git diff --check` b
 Before any future upload, download fresh Draft files, merge merchant changes, validate an isolated full theme and upload only an explicit file allowlist with `--nodelete`. Re-download and compare uploaded files. Local `config/settings_data.json`, `templates/product.json` and `templates/page.about.json` are older than protected remote copies; do not perform an unmerged full-theme push. Preserve Judge.me and existing About settings. Keep API credentials outside version control.
 
 ## Handover
+
+The repository is published privately at [six7-shopify-store](https://github.com/sahilbhardwaj037037-sys/six7-shopify-store). Git identity sanitization and the private `main` push are complete. Public visibility requires separate owner approval. Screenshot dates and QA results remain the original verification record.
 
 See [portfolio-delivery](portfolio-delivery/README.md) for the case study, screenshot gallery/manifest, QA evidence, handover checklist, delivery summary and GitHub publication checks. Source verification reports remain under `reports/final-verification/` and `reports/final-sprint/`; they are local artifacts, not part of the committed theme.

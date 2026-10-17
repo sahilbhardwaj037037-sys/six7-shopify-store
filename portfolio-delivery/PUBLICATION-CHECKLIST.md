@@ -12,10 +12,18 @@ Documentation/security review date: **17 October 2026**. Storefront verification
 - Stable `preview_theme_id` links identify the unpublished theme; they are not temporary signed product-preview keys and do not grant storefront authentication.
 - Screenshot coverage, PNG integrity, file sizes, JSON manifest, relative document links and staged whitespace checked before commit.
 
+## Completed Git privacy and private publication
+
+- [x] Rewrite only the initial 12 commits reachable from `main` to use the owner-provided GitHub noreply email for both author and committer. Preserve source trees, messages, names, timestamps and parent relationships. Independent integrity and backup recovery checks passed.
+- [x] Configure repository-local Git name/email for future commits; leave global and system identity settings unchanged.
+- [x] Verify the sanitized theme source commit `74ea65f15a228da180094b06d77e91b09d3c3245` against the private rewrite mapping and original source tree. The screenshot manifest preserves the original capture commit explicitly as historical provenance.
+- [x] Verify ownership and **PRIVATE** visibility of [six7-shopify-store](https://github.com/sahilbhardwaj037037-sys/six7-shopify-store), then push only `refs/heads/main:refs/heads/main` without force, tags or mirror operations.
+- [x] Independently verify the initial private publication at `513fed8507de5a8a9d566294d2f3c0b66777ed35`: all 12 commits sanitized, intended files and 26 screenshots present, no excluded files or additional remote branches/tags. This is the initial publication milestone; subsequent documentation changes use ordinary commits.
+- [x] Preserve all 15 local checkpoint refs. Keep checkpoint refs, reflogs, original metadata, backups and recovery bundles private; none are part of the published branch.
+
 ## Before an owner-approved public release
 
-- [ ] Review author/committer identity in existing Git metadata. Historical commits contain an automatically generated local-machine email identity; file-content secret scans do not remove Git metadata. No identity or history was rewritten.
-- [ ] Publish only the intended project branch. Local `refs/agents/*` and `refs/codex/*` checkpoint refs contain excluded local artifacts, including personal filesystem paths. Keep those refs private; do not mirror-push all refs.
-- [ ] Approve repository creation, visibility and a specific push separately. Neither a remote repository nor a push is created by this documentation task.
+- [ ] Obtain explicit approval to change repository visibility from **PRIVATE** to Public. Private publication does not authorize that change.
+- [ ] Continue using ordinary noreply-authored commits and explicit `main`-only pushes. Keep local `refs/agents/*` and `refs/codex/*` private; do not mirror-push all refs.
 
-The source and documentation are prepared for GitHub review. Public release does not make the unpublished theme publicly accessible and does not imply real-commerce launch readiness.
+The repository is published privately and ready for owner review. The Shopify theme remains unpublished. A future public GitHub release would not make the Draft storefront publicly accessible or imply real-commerce launch readiness. Original QA facts and screenshot capture timestamps remain unchanged.
