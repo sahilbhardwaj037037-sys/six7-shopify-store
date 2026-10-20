@@ -1,0 +1,82 @@
+{
+  "documentation_review": "2026-10-20",
+  "new_storefront_captures": false,
+  "images": [
+    {
+      "file": "desktop-home-hero.webp",
+      "captured": "2026-10-17",
+      "method": "Existing genuine authenticated Chromium screenshot, reused; no new login in documentation run.",
+      "viewport": "1440 \u00d7 900 (bottom cropped from 1440 \u00d7 1000)",
+      "notes": "Approved Draft release; motion paused for capture.",
+      "source": "reports/approved-release-20261017/remote/glow-on.png",
+      "source_sha256": "e684b00acd5714f1fbc436dcd692a92a46ee2221c281e34656bfcb76bd425b58",
+      "sha256": "05748beef85d76b1df43355385d937b555a141e0c3b5d088f6c22365363726b4",
+      "bytes": 53598
+    },
+    {
+      "file": "mobile-home.webp",
+      "captured": "2026-10-17",
+      "method": "Existing genuine authenticated Chromium screenshot, reused; no new login in documentation run.",
+      "viewport": "390 \u00d7 844",
+      "notes": "Cream Motion Lab browser capture; reduced motion. Predates final V2 homepage motion; internal page styling retained.",
+      "source": "reports/cream-motion/screenshots/after/home-mobile.png",
+      "source_sha256": "0072f76231865ec8ac30fbf74eba10b620f4bff4813a63e72685d3c0372b70b8",
+      "sha256": "b0f9c8ebf91ef741cb55abe982af1c80196aa769c928620958927669e595f91d",
+      "bytes": 25218
+    },
+    {
+      "file": "desktop-collection.webp",
+      "captured": "2026-10-17",
+      "method": "Existing genuine authenticated Chromium screenshot, reused; no new login in documentation run.",
+      "viewport": "1440 \u00d7 1000",
+      "notes": "Cream Motion Lab browser capture; reduced motion. Predates final V2 homepage motion; internal page styling retained.",
+      "source": "reports/cream-motion/screenshots/after/collection-desktop.png",
+      "source_sha256": "a0fc290a3a69d91e42bf7720ec82b2af90e0b1c8bc49f909d942d89bb45f81d0",
+      "sha256": "c4445815d6675b260adfe856d2555f624b6cc05e1160c7bf12c63b974ef98741",
+      "bytes": 40128
+    },
+    {
+      "file": "mobile-collection.webp",
+      "captured": "2026-10-17",
+      "method": "Existing genuine authenticated Chromium screenshot, reused; no new login in documentation run.",
+      "viewport": "390 \u00d7 844",
+      "notes": "Cream Motion Lab browser capture; reduced motion. Predates final V2 homepage motion; internal page styling retained.",
+      "source": "reports/cream-motion/screenshots/after/collection-mobile.png",
+      "source_sha256": "ffaa2e5fa8bf4ad6600853bf08c62227a1eb280b4704556ae18d9f9e42b1006a",
+      "sha256": "25ece6a4c841bc2bc029fcfaff82701f2c88db3021fdcaaef033d40c36c88b34",
+      "bytes": 21608
+    },
+    {
+      "file": "desktop-product.webp",
+      "captured": "2026-10-17",
+      "method": "Existing genuine authenticated Chromium screenshot, reused; no new login in documentation run.",
+      "viewport": "1440 \u00d7 1000",
+      "notes": "Cream Motion Lab browser capture; reduced motion. Predates final V2 homepage motion; internal page styling retained.",
+      "source": "reports/cream-motion/screenshots/after/product-desktop.png",
+      "source_sha256": "3306c33930f953b692883c8652de7532430dedc93200cc097ed36b385e58a505",
+      "sha256": "19eb2ef32a95c2f6c0dd78b0f3f2c8b1e2b94c4ce9a56ce0d9e3a5c5ee37772d",
+      "bytes": 33204
+    },
+    {
+      "file": "mobile-product.webp",
+      "captured": "2026-10-17",
+      "method": "Existing genuine authenticated Chromium screenshot, reused; no new login in documentation run.",
+      "viewport": "390 \u00d7 844",
+      "notes": "Cream Motion Lab browser capture; reduced motion. Predates final V2 homepage motion; internal page styling retained.",
+      "source": "reports/cream-motion/screenshots/after/product-mobile.png",
+      "source_sha256": "169e549f247e1ec6a1778dc50dc8541dd040ec8d982e446d6c1cd8b96a91b98d",
+      "sha256": "ffe51c5b47248fb2d634150cac1303420a947ad5723b5ef3f3d063e23c6c4530",
+      "bytes": 18428
+    }
+  ],
+  "unavailable": [
+    "desktop full homepage",
+    "desktop featured products",
+    "desktop cart",
+    "tablet homepage",
+    "mobile navigation",
+    "mobile cart"
+  ],
+  "responsive_status": "Historical 390/768/1440 Chromium checks only. No new browser layout validation; 320 not verified.",
+  "privacy_review": "Selected images visually inspected; no customer, payment, credential or private account information visible."
+}
